@@ -1,0 +1,36 @@
+@use '../../styles/mixins' as *;
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+
+  &__label {
+    @include body2($font-weight-normal);
+    color: var(--color-semantic-label-normal);
+  }
+
+  &__input {
+    width: auto;
+    padding: 8px 14px;
+    border: 1px solid #CED4DA;
+    border-radius: 6px;
+    @include body1($font-weight-normal);
+    resize: none;
+    outline: none;
+    background: #FCFCFC;
+
+    &::placeholder {
+      color: #999;
+    }
+
+    &--question {
+      min-height: 56px; // 질문 높이
+    }
+
+    &--answer {
+      min-height: 90px; // 답변 높이
+    }
+  }
+}

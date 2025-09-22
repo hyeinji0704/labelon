@@ -1,0 +1,69 @@
+/* ==============================
+   Button Styles
+   ============================== */
+
+@use './mixins' as *;
+
+/* === Size Variants === */
+@mixin button-size-lg {
+  @include headline1($font-weight-medium); // Label1 Medium
+  padding: 10px 24px;
+  border-radius: 8px;
+}
+
+@mixin button-size-sm {
+  @include body2($font-weight-normal);
+  padding: 3px 8px;
+  border-radius: 8px;
+}
+
+/* === Primary Button === */
+@mixin button-primary($size: lg) {
+  font-family: var(--font-sans);
+  color: var(--color-semantic-static-white);
+  background-color: var(--color-semantic-btn-primary-normal);
+  border: none;
+
+  @if $size == lg {
+    @include button-size-lg;
+  } @else if $size == sm {
+    @include button-size-sm;
+  }
+
+  &:hover {
+    background-color: var(--color-semantic-btn-primary-hover);
+  }
+  &:focus {
+    background-color: var(--color-semantic-btn-primary-focus);
+  }
+  &:disabled {
+    background-color: var(--color-semantic-btn-primary-disabled);
+    cursor: not-allowed;
+  }
+}
+
+/* === Secondary Button === */
+@mixin button-secondary($size: lg) {
+  font-family: var(--font-sans);
+  color: var(--color-semantic-label-normal);
+  background-color: var(--color-semantic-btn-secondary-normal);
+  border: 1px solid var(--color-semantic-btn-secondary-border);
+
+  @if $size == lg {
+    @include button-size-lg;
+  } @else if $size == sm {
+    @include button-size-sm;
+  }
+
+  &:hover {
+    background-color: var(--color-semantic-btn-secondary-hover);
+  }
+  &:focus {
+    background-color: var(--color-semantic-btn-secondary-focus);
+  }
+  &:disabled {
+    background-color: var(--color-semantic-btn-secondary-disabled);
+    color: var(--color-semantic-label-disabled);
+    cursor: not-allowed;
+  }
+}

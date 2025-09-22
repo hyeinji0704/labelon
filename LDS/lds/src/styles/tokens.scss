@@ -1,0 +1,92 @@
+:root {
+  /* === Fonts === */
+  --font-sans: 'Pretendard', -apple-system, BlinkMacSystemFont,
+               'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-head: 'Poppins', 'Pretendard', sans-serif;
+
+  /* === Font Sizes === */
+  --font-size-13: 13px; // 본문 보조
+  --font-size-15: 15px; // 본문 기본
+  --font-size-16: 16px; // 버튼/입력 등 인터랙션 기본
+  --font-size-18: 18px; // 제목, 강조 텍스트
+
+  /* === Font Weights === */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* === Spacing === */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+
+  /* === Border Radius === */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+
+
+
+  
+   /* Static */
+  --color-semantic-static-white: #ffffff;
+  --color-semantic-static-black: #171719;
+
+  /* Primary */
+  --color-semantic-primary-normal: #0066ff;
+
+  /* Label */
+  --color-semantic-label-neutral: #838386;
+  --color-semantic-label-normal: #171719;
+  --color-semantic-label-strong: #171719;
+
+  /* Background */
+  --color-semantic-background-normal: #ffffff;
+  --color-semantic-background-alternative: #f5f5f5;
+  --color-semantic-background-elevated-normal: #efefef;
+  --color-semantic-background-elevated-alternative: #e4e4e4;
+  --color-semantic-background-point-normal: #e4edff;
+  --color-semantic-background-point-alternative: #e4edff;
+  --color-semantic-background-input-normal: #fcfcfc;
+
+  /* Fill */
+  --color-semantic-fill-icon-normal: #b1b1b1;
+  --color-semantic-fill-icon-alternative: #a6b1c5;
+
+  /* Line */
+  --color-semantic-line-normal: #ced4da;
+  --color-semantic-line-alternative: #e2e3e4;
+  --color-semantic-line-neutral: #dcdcdc;
+  --color-semantic-line-solid-normal: #eaebec;
+
+  /* Inverse */
+  --color-semantic-inverse-label: #ffffff;
+  --color-semantic-inverse-background: #ffffff;
+
+
+  /* Button - Primary */
+
+  --color-semantic-btn-primary-normal: #0066ff;
+  --color-semantic-btn-primary-hover: #005ce5;
+  --color-semantic-btn-primary-focus: #0052cc;
+  --color-semantic-btn-primary-disabled: #a6b1c5;
+
+
+    /* Button - Secondary */
+
+  --color-semantic-btn-secondary-normal: #FFFFFF;
+  --color-semantic-btn-secondary-hover: #F6F6F6;
+  --color-semantic-btn-secondary-focus: #F1F1F1;
+  --color-semantic-btn-secondary-disabled: #a6b1c5;
+
+   --color-semantic-btn-secondary-border: #E1E1E2;
+
+
+
+}
+
+
+

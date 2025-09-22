@@ -1,0 +1,33 @@
+@use '../../styles/button' as *;
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-md);
+
+  /* === Variant === */
+  &--primary {
+    @include button-primary(lg); // 기본값 lg
+  }
+
+  &--secondary {
+    @include button-secondary(lg);
+  }
+
+  /* === Size === */
+  &--lg {
+    @include button-size-lg;
+  }
+
+  &--sm {
+    @include button-size-sm;
+  }
+
+  /* === 추가: md 지원 === */
+  &--md {
+    @include button-size-lg; // lg랑 동일하게 쓸지, 따로 정의할지 결정
+  }
+}

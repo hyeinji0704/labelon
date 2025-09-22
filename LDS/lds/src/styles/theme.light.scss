@@ -1,0 +1,51 @@
+:root[data-theme='light'] {
+  /* Static */
+  --color-semantic-static-white: #ffffff;
+  --color-semantic-static-black: #171719;
+
+  /* Primary */
+  --color-semantic-primary-normal: #0066ff;
+
+  /* Label */
+  --color-semantic-label-neutral: #838386;
+  --color-semantic-label-normal: #171719; /* opacity 72%까지 UI단에서 조절 */
+  --color-semantic-label-strong: rgba(23, 23, 25, 0.5) ; /* opacity 50%까지 UI단에서 조절 */
+
+  /* Background */
+  --color-semantic-background-normal: #ffffff;
+  --color-semantic-background-alternative: #f5f5f5;
+  --color-semantic-background-elevated-normal: #efefef;
+  --color-semantic-background-elevated-alternative: #e4e4e4;
+  --color-semantic-background-point-normal: #e4edff;
+  --color-semantic-background-point-alternative:rgba(228, 237, 255, 0.36); /* opacity 36% UI단에서 처리 */
+  --color-semantic-background-input-normal: #fcfcfc;
+
+  /* Fill */
+  --color-semantic-fill-icon-normal: #b1b1b1;
+  --color-semantic-fill-icon-alternative: #a6b1c5;
+
+  /* Line */
+  --color-semantic-line-normal: #ced4da;
+  --color-semantic-line-alternative: #e2e3e4;
+  --color-semantic-line-neutral: #dcdcdc;
+  --color-semantic-line-solid-normal: #eaebec;
+
+  /* Inverse */
+  --color-semantic-inverse-label: #ffffff;
+  --color-semantic-inverse-background: #ffffff;
+
+  /* Button - Primary */
+  --color-semantic-btn-primary-normal: #0066ff;
+  --color-semantic-btn-primary-hover: #005ce5;
+  --color-semantic-btn-primary-focus: #0052cc;
+  --color-semantic-btn-primary-disabled: #a6b1c5;
+
+  
+    /* Button - Secondary */
+  --color-semantic-btn-secondary-normal: #FFFFFF;
+  --color-semantic-btn-secondary-hover: #F6F6F6;
+  --color-semantic-btn-secondary-focus: #F1F1F1;
+  --color-semantic-btn-secondary-disabled: #a6b1c5;
+
+   --color-semantic-btn-secondary-border: #CDCDCF;
+}
