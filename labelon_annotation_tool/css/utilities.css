@@ -1,0 +1,131 @@
+/* utilities.css */
+/* 공통 유틸리티 클래스 */
+
+/* Flexbox helpers */
+.flex {
+  display: flex;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Hidden helpers */
+.hidden {
+  display: none !important;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Spacing utils */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+
+
+/* ==============================
+   Typography Utilities
+   ============================== */
+
+/* Body 1 */
+.body1-normal {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 400;
+}
+.body1-medium {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 500;
+}
+.body1-bold {
+  font-size: 16px;
+  line-height: 150%;
+  font-weight: 700;
+}
+
+/* Body 2 */
+.body2-normal {
+  font-size: 15px;
+  line-height: 146.7%;
+  font-weight: 400;
+}
+.body2-medium {
+  font-size: 15px;
+  line-height: 146.7%;
+  font-weight: 500;
+}
+.body2-bold {
+  font-size: 15px;
+  line-height: 146.7%;
+  font-weight: 700;
+}
+
+/* Label 1 */
+.label1-normal {
+  font-size: 14px;
+  line-height: 142.9%;
+  font-weight: 400;
+}
+.label1-medium {
+  font-size: 14px;
+  line-height: 142.9%;
+  font-weight: 500;
+}
+.label1-bold {
+  font-size: 14px;
+  line-height: 142.9%;
+  font-weight: 700;
+}
+
+/* Heading 2 */
+.heading2-normal {
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 400;
+}
+.heading2-medium {
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 500;
+}
+.heading2-bold {
+  font-size: 20px;
+  line-height: 140%;
+  font-weight: 700;
+}
+
+/* Headline 1 */
+.headline1-normal {
+  font-size: 18px;
+  line-height: 144.5%;
+  font-weight: 400;
+}
+.headline1-medium {
+  font-size: 18px;
+  line-height: 144.5%;
+  font-weight: 500;
+}
+.headline1-bold {
+  font-size: 18px;
+  line-height: 144.5%;
+  font-weight: 700;
+}

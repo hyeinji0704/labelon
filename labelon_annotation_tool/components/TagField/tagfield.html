@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TagField Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- 의존 컴포넌트 스타일 -->
+  <link rel="stylesheet" href="../Tag/tag.css">
+  <link rel="stylesheet" href="../TextField/textfield.css">
+  <!-- TagField 전용 -->
+  <link rel="stylesheet" href="./tagfield.css">
+</head>
+<body>
+
+  <!-- Column Layout -->
+  <div class="tag-field tag-field--column">
+    <div class="tag tag--default">
+      <div class="tag__header">
+        <span class="tag__label">항목</span>
+      </div>
+    </div>
+    <div class="textfield">
+      <textarea
+        class="textfield__input textfield__input--default"
+        placeholder="내용을 입력하세요."
+      ></textarea>
+    </div>
+  </div>
+
+  <br><br>
+
+  <!-- Row Layout -->
+  <div class="tag-field tag-field--row">
+    <div class="tag tag--semantic">
+      <div class="tag__header">
+        <span class="tag__label">설명</span>
+      </div>
+    </div>
+    <div class="textfield">
+      <textarea
+        class="textfield__input textfield__input--default"
+        placeholder="추가 설명을 입력하세요."
+      ></textarea>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accordion Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- 컴포넌트 스타일 -->
+  <link rel="stylesheet" href="./accordion.css">
+</head>
+<body>
+  <div class="accordion flex-column">
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item is-open">
+      <button type="button" class="accordion-item__header flex-between body1-medium">
+        <span class="accordion-item__title">제목 1</span>
+       <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+      <div class="accordion-item__content body2-normal">
+        <p>여기에 아코디언 내용 1이 들어갑니다.</p>
+      </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+      <button type="button" class="accordion-item__header flex-between body1-medium">
+        <span class="accordion-item__title">제목 2</span>
+        <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+      <div class="accordion-item__content body2-normal">
+        <p>여기에 아코디언 내용 2가 들어갑니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- (선택) 아코디언 토글 JS -->
+  <script>
+    document.querySelectorAll('.accordion-item__header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.accordion-item');
+        item.classList.toggle('is-open');
+      });
+    });
+  </script>
+</body>
+</html>

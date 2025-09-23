@@ -1,0 +1,21 @@
+/* ==========================================================================
+   WorkBoard Component Styles
+   ========================================================================== */
+
+.workboard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+
+  min-width: 700px;
+  width: 100%;
+}
+
+/* 샘플 content-box (테스트용) */
+.content-box {
+  padding: 16px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  text-align: center;
+}

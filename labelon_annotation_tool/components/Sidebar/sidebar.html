@@ -1,0 +1,152 @@
+  <!DOCTYPE html>
+  <html lang="ko" data-theme="light">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sidebar Component</title>
+
+    <!-- 공통 스타일 -->
+    <link rel="stylesheet" href="../../css/main.css">
+
+    <!-- 기존처럼 여러 개 링크하지 않고 딱 하나만 -->
+    <link rel="stylesheet" href="./sidebar.bundle.css">
+  </head>
+  <body>
+
+    <div class="sidebar-demo">
+
+      <!-- ✅ 열림 상태 -->
+      <aside class="sidebar is-open">
+        <!-- 상단 헤더 -->
+        <div class="sidebar__header">
+          <div class="sidebar__title-group">
+            <h2 class="sidebar__title">작업 현황</h2>
+            <button class="btn btn--secondary btn--sm">작업가이드</button>
+          </div>
+          <button class="sidebar__close">
+            <img src="../../images/icons/icon-close.svg" alt="닫기" />
+          </button>
+        </div>
+
+        <!-- 본문 -->
+        <div class="sidebar__body">
+          <section class="form-section form-section--with-border">
+            <h3 class="form-section__title">데이터 타입</h3>
+            <div class="form-field form-field--horizontal">
+              <div class="form-field__control">
+                  <label class="label">유형</label>
+                  <div class="select " role="combobox" aria-haspopup="listbox" aria-expanded="true">
+                    <button type="button" class="select__control" aria-label="옵션 선택됨: 옵션 2">
+                      <span class="select__label" title="옵션 2">옵션 2</span>
+                      <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </button>
+
+                    <ul class="select__menu" role="listbox" tabindex="-1">
+                      <li class="select__option" role="option">옵션 1</li>
+                      <li class="select__option is-selected" role="option" aria-selected="true">옵션 2</li>
+                      <li class="select__option" role="option">옵션 3 아주아주 긴 라벨 테스트용 텍스트</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
+            <h3 class="form-section__title">질문 세트</h3>
+            <div class="accordion">
+              <div class="accordion-item is-open">
+                <button type="button" class="accordion-item__header flex-between">
+                  <span class="accordion-item__title">세트 01</span>
+                  <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+                </button>
+                <div class="accordion-item__content">
+                  <div class="textfield">
+                    <label class="textfield__label" for="tf2">질문</label>
+                    <textarea
+                      id="tf2"
+                      class="textfield__input textfield__input--question"
+                      placeholder="질문을 입력하세요."
+                    ></textarea>
+                  </div>
+                  <div class="textfield">
+                    <label class="textfield__label" for="tf3">답변</label>
+                    <textarea
+                      id="tf3"
+                      class="textfield__input textfield__input--answer"
+                      placeholder="답변을 입력하세요."
+                    ></textarea>
+                  </div>
+                  <div class="tag-list">
+                    <div class="tag tag--default">
+                      <div class="tag__header">
+                        <img src="../../images/icons/icon-tag__law.svg" alt="" class="tag__icon">
+                        <span class="tag__label">법령근거</span>
+                      </div>
+                      <ul class="tag__list">
+                        <li class="tag__content">제58조 2항</li>
+                        <li class="tag__content">시행령 제77조 2항</li>
+                        <li class="tag__content">방송통신기자재 적합성 평가</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-item__header flex-between">
+                  <span class="accordion-item__title">세트 02</span>
+                  <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="sidebar__footer">
+          <section class="form-section">
+            <h3 class="form-section__title">지문 작업 가능여부</h3>
+            <div class="form-field form-field--horizontal">
+              <div class="form-field__control">
+                  <label class="label">가능여부</label>
+                  <div class="select " role="combobox" aria-haspopup="listbox" aria-expanded="true">
+                    <button type="button" class="select__control" aria-label="옵션 선택됨: 옵션 2">
+                      <span class="select__label" title="옵션 2">옵션 2</span>
+                      <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </button>
+
+                    <ul class="select__menu" role="listbox" tabindex="-1">
+                      <li class="select__option" role="option">옵션 1</li>
+                      <li class="select__option is-selected" role="option" aria-selected="true">옵션 2</li>
+                      <li class="select__option" role="option">옵션 3 아주아주 긴 라벨 테스트용 텍스트</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </section>
+          <button class="btn btn--primary btn--lg">제출하기</button>
+        </div>
+      </aside>
+
+      <!-- ✅ 닫힘 상태 -->
+      <aside class="sidebar is-closed">
+        <div class="sidebar__header">
+          <h2 class="sidebar__title">작업 현황</h2>
+          <button class="sidebar-toggle">
+            <img src="../../images/icons/icon-sidebar-open.svg" alt="사이드바 열기" />
+          </button>
+        </div>
+      </aside>
+
+    </div>
+
+  </body>
+  </html>

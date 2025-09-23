@@ -1,0 +1,124 @@
+/* ==========================================================================
+   Select Component Styles
+   ========================================================================== */
+
+.select {
+  position: relative;
+  display: inline-block;
+  width: 288px;
+  /* height를 고정하지 않고 컨텐츠 기준으로: */
+  font-family: var(--font-family-base);
+}
+
+/* 비활성 */
+.select.is-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* 컨트롤 버튼 */
+.select__control {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  min-height: 38px;                 /* 고정 높이 대신 최소 높이 */
+  padding: 8px 12px 8px 20px;
+  border-radius: var(--radius-md);
+
+  color: var(--color-semantic-label-normal);
+  background-color: var(--color-semantic-background-alternative);
+  border: 1px solid var(--color-semantic-line-neutral);
+
+  cursor: pointer;
+  transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.select__control:hover {
+  background-color: var(--color-semantic-btn-secondary-hover);
+}
+
+.select__control:focus,
+.select__control:focus-visible {
+  outline: none;
+  border-color: var(--color-semantic-primary-normal);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-semantic-primary-normal), transparent 70%);
+}
+
+/* 라벨(텍스트) - 넘침 처리 */
+.select__label {
+  flex: 1;
+  min-width: 0;            /* flex overflow 방지 */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+/* 아이콘 (inline SVG) */
+.select__icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+  transition: transform .2s ease, color .2s ease;
+}
+
+/* 열림 상태 */
+.select.is-open .select__control {
+  border-color: var(--color-semantic-primary-normal);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-semantic-primary-normal), transparent 70%);
+}
+.select.is-open .select__icon {
+  transform: rotate(180deg);
+}
+
+/* 드롭다운 메뉴 */
+.select__menu {
+  position: absolute;
+  inset-inline: 0;         /* left:0; right:0; */
+  top: calc(100% + 4px);
+
+  background: var(--color-semantic-background-normal);
+  color: var(--color-semantic-label-normal);
+  border: 1px solid var(--color-semantic-line-neutral);
+  border-radius: var(--radius-md);
+  overflow: auto;
+  max-height: 240px;
+  z-index: 10;
+
+  /* display 토글 대신 트랜지션 가능한 패턴 */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(4px);
+  transition: opacity .16s ease, transform .16s ease, visibility 0s linear .16s;
+}
+
+/* 열림 시 메뉴 표시 */
+.select.is-open .select__menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition-delay: 0s; /* 즉시 보이기 */
+}
+
+/* 옵션 */
+.select__option {
+  padding: 10px 12px;
+  cursor: pointer;
+  line-height: 1.4;
+  white-space: nowrap;        /* 긴 텍스트 한 줄 처리 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.select__option:hover {
+  /* hover/selected 기본값이 없으면 fallback 사용 */
+  background: var(--color-hover, #f5f5f5);
+}
+
+.select__option.is-selected,
+.select__option[aria-selected="true"] {
+  font-weight: var(--font-weight-medium);
+  background: var(--color-selected, #e6f0ff);
+}

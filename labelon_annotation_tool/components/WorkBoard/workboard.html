@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WorkBoard Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- WorkBoard 전용 -->
+  <link rel="stylesheet" href="./workboard.css">
+  <link rel="stylesheet" href="../WorkBoardHeader/workboard-header.css">
+  <link rel="stylesheet" href="../WorkBoardContent/workboard-content.css">
+</head>
+<body>
+
+  <div class="workboard">
+    <!-- WorkBoardHeader -->
+    <div class="workboard-header">
+      <h2 class="workboard-header__title">작업데이터</h2>
+      <div class="workboard-header__status">
+        <span class="workboard-header__time">
+          <img src="../../images/icons/icon-time.svg" alt="" class="workboard-header__icon" />
+          작업시간 <span class="workboard-header__value">01:25:32</span>
+        </span>
+        <span class="workboard-header__approved">
+          <img src="../../images/icons/icon-confirm.svg" alt="" class="workboard-header__icon" />
+          승인 작업수 <span class="workboard-header__value">15</span>
+        </span>
+        <span class="workboard-header__total">
+          <img src="../../images/icons/icon-total.svg" alt="" class="workboard-header__icon" />
+          전체 작업수 <span class="workboard-header__value">30</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- WorkBoardContent -->
+    <div class="workboard-content workboard-content--2">
+      <div class="content-box">필드 A</div>
+      <div class="content-box">필드 B</div>
+      <div class="content-box">필드 C</div>
+      <div class="content-box">필드 D</div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+/* ==========================================================================
+   Button Styles (SCSS → CSS 변환, theme token 적용)
+   ========================================================================== */
+
+.btn {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-base);
+  border: none;
+  border-radius: var(--radius-md);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* === Size Variants === */
+.btn--lg {
+  font-size: 18px; /* headline1-medium */
+  line-height: 144.5%;
+  font-weight: var(--font-weight-medium);
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+}
+
+.btn--md {
+  font-size: 18px; /* headline1-medium */
+  line-height: 144.5%;
+  font-weight: var(--font-weight-medium);
+  padding: 10px 24px;
+  border-radius: var(--radius-md);
+}
+
+.btn--sm {
+  font-size: 15px; /* body2-normal */
+  line-height: 146.7%;
+  font-weight: var(--font-weight-regular);
+  padding: 3px 8px;
+  border-radius: var(--radius-md);
+}
+
+/* === Primary Button === */
+.btn--primary {
+  color: var(--color-semantic-static-white);
+  background-color: var(--color-semantic-btn-primary-normal);
+}
+.btn--primary:hover {
+  background-color: var(--color-semantic-btn-primary-hover);
+}
+.btn--primary:focus {
+  background-color: var(--color-semantic-btn-primary-focus);
+}
+.btn--primary:disabled {
+  background-color: var(--color-semantic-btn-primary-disabled);
+  cursor: not-allowed;
+}
+
+/* === Secondary Button === */
+.btn--secondary {
+  color: var(--color-semantic-label-normal);
+  background-color: var(--color-semantic-btn-secondary-normal);
+  border: 1px solid var(--color-semantic-btn-secondary-border);
+}
+.btn--secondary:hover {
+  background-color: var(--color-semantic-btn-secondary-hover);
+}
+.btn--secondary:focus {
+  background-color: var(--color-semantic-btn-secondary-focus);
+}
+.btn--secondary:disabled {
+  background-color: var(--color-semantic-btn-secondary-disabled);
+  color: var(--color-semantic-label-neutral);
+  cursor: not-allowed;
+}

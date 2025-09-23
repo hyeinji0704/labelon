@@ -1,0 +1,78 @@
+/* ==========================================================================
+   TextField Component Styles
+   ========================================================================== */
+
+.textfield {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+}
+
+/* 라벨 */
+.textfield__label {
+  font-size: 15px;        /* body2-normal 대체 */
+  line-height: 1.467;
+  font-weight: 400;
+  color: var(--color-semantic-label-normal);
+}
+
+/* 입력 필드 */
+.textfield__input {
+  width: auto;
+  padding: 6px 14px;
+  border: 1px solid #CED4DA;
+  border-radius: 6px;
+
+  font-size: 16px;        /* body1-normal 대체 */
+  line-height: 1.5;
+  font-weight: 400;
+
+  resize: none;
+  outline: none;
+  background: #FCFCFC;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  height: auto;
+  overflow-y: hidden;
+}
+
+.textfield__input::placeholder {
+  color: #999;
+}
+
+.textfield__input:hover {
+  border-color: #ADB5BD;
+}
+
+.textfield__input:focus {
+  border-color: var(--color-brand-primary, #2970FF);
+  box-shadow: 0 0 0 2px rgba(41, 112, 255, 0.2);
+}
+
+.textfield__input:disabled {
+  background: #F1F3F5;
+  color: #868E96;
+  cursor: not-allowed;
+}
+
+/* === Variants === */
+.textfield__input--default {
+  min-height: 40px;
+  background: #ffffff;
+}
+
+.textfield__input--question {
+  min-height: 56px;
+  background: #FCFCFC;
+}
+
+.textfield__input--answer {
+  min-height: 90px;
+  background: #F9FAFB;
+  overflow-y: auto;
+}
+
+/* Disabled 상태 */
+.textfield.is-disabled .textfield__label {
+  color: #868E96;
+}

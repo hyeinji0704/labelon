@@ -1,0 +1,23 @@
+/* ==========================================================================
+   Index Page Bundle Styles
+   목적: index.html에서 사용하는 모든 컴포넌트 CSS를 통합 관리
+   ========================================================================== */
+
+/* === 공통 레이아웃 === */
+@import url("./main.css");
+
+/* === 개별 컴포넌트 === */
+@import url("../components/Header/header.css");
+@import url("../components/WorkBoard/workboard.css");
+@import url("../components/WorkBoardHeader/workboard-header.css");
+@import url("../components/WorkBoardContent/workboard-content.css");
+@import url("../components/Sidebar/sidebar.css");
+@import url("../components/Accordion/accordion.css");
+@import url("../components/Button/button.css");
+@import url("../components/FormSection/formsection.css");
+@import url("../components/FormField/formfield.css");
+@import url("../components/Select/select.css");
+@import url("../components/Label/label.css");
+@import url("../components/TextField/textfield.css");
+@import url("../components/Tag/tag.css");
+@import url("../components/TagField/tagfield.css");

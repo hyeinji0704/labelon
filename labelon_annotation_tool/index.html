@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MainPage</title>
+
+  <link rel="stylesheet" href="./css/index.bundle.css">
+</head>
+<body>
+
+  <div class="main-page">
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <img src="./images/labelon_logo.svg" alt="Logo" class="header__logo-img">
+        <span class="header__appname">Label ON</span>
+      </div>
+      <div class="header__controls">
+        <div class="header__user">
+          <img src="./images/icons/icon-user.svg" alt="user" class="header__user-icon">
+          <span class="header__username"><em>천수희</em>님</span>
+        </div>
+        <button class="header__mode-btn">
+          <img src="./images/icons/moon.svg" alt="mode toggle" class="header__icon">
+        </button>
+      </div>
+    </header>
+
+    <div class="main-page__body">
+      <!-- 중앙 WorkBoard -->
+      <main class="main-page__content">
+        <div class="workboard">
+          <!-- WorkBoard Header -->
+          <div class="workboard-header">
+            <h2 class="workboard-header__title">작업데이터</h2>
+            <div class="workboard-header__status">
+              <span class="workboard-header__time">
+                <img src="./images/icons/icon-time.svg" class="workboard-header__icon" alt="">
+                작업시간 <span class="workboard-header__value">40분 51초</span>
+              </span>
+              <span class="workboard-header__approved">
+                <img src="./images/icons/icon-confirm.svg" class="workboard-header__icon" alt="">
+                승인 작업수 <span class="workboard-header__value">30</span>
+              </span>
+              <span class="workboard-header__total">
+                <img src="./images/icons/icon-total.svg" class="workboard-header__icon" alt="">
+                전체 작업수 <span class="workboard-header__value">100</span>
+              </span>
+            </div>
+          </div>
+
+          <!-- WorkBoard Content -->
+          <div class="workboard-content workboard-content--2">
+            <div class="tag-field tag-field--column">
+              <div class="tag">
+                <div class="tag__header"><span class="tag__label">인증/등록번호</span></div>
+              </div>
+              <textarea class="textfield__input textfield__input--default">ABC-12345</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag">
+                <div class="tag__header"><span class="tag__label">기자재 명칭</span></div>
+              </div>
+              <textarea class="textfield__input textfield__input--default">스마트폰</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag">
+                <div class="tag__header"><span class="tag__label">제조국가</span></div>
+              </div>
+              <textarea class="textfield__input textfield__input--default">대한민국</textarea>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="main-page__sidebar">
+        <div class="sidebar is-open">
+          <div class="sidebar__header">
+            <div class="sidebar__title-group">
+              <h2 class="sidebar__title">작업 현황</h2>
+              <button class="btn btn--secondary btn--sm">작업가이드</button>
+            </div>
+            <button class="sidebar__close">
+              <img src="./images/icons/icon-close.svg" alt="닫기">
+            </button>
+          </div>
+          <div class="sidebar__body">
+            <section class="form-section form-section--with-border">
+              <h3 class="form-section__title">데이터 타입</h3>
+              <div class="form-field form-field--horizontal">
+                <label class="label">유형</label>
+                <select class="select__control">
+                  <option>기본형</option>
+                  <option>고급형</option>
+                </select>
+              </div>
+            </section>
+
+            <section class="form-section">
+            <h3 class="form-section__title">질문 세트</h3>
+            <div class="accordion">
+              <div class="accordion-item is-open">
+                <button type="button" class="accordion-item__header flex-between">
+                  <span class="accordion-item__title">세트 01</span>
+                  <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+                </button>
+                <div class="accordion-item__content">
+                  <div class="textfield">
+                    <label class="textfield__label" for="tf2">질문</label>
+                    <textarea
+                      id="tf2"
+                      class="textfield__input textfield__input--question"
+                      placeholder="질문을 입력하세요."
+                    ></textarea>
+                  </div>
+                  <div class="textfield">
+                    <label class="textfield__label" for="tf3">답변</label>
+                    <textarea
+                      id="tf3"
+                      class="textfield__input textfield__input--answer"
+                      placeholder="답변을 입력하세요."
+                    ></textarea>
+                  </div>
+                  <div class="tag-list">
+                    <div class="tag tag--default">
+                      <div class="tag__header">
+                        <img src="./images/icons/icon-tag__law.svg" alt="" class="tag__icon">
+                        <span class="tag__label">법령근거</span>
+                      </div>
+                      <ul class="tag__list">
+                        <li class="tag__content">제58조 2항</li>
+                        <li class="tag__content">시행령 제77조 2항</li>
+                        <li class="tag__content">방송통신기자재 적합성 평가</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button type="button" class="accordion-item__header flex-between">
+                  <span class="accordion-item__title">세트 02</span>
+                  <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+                </button>
+              </div>
+            </div>
+          </section>
+          </div>
+          <div class="sidebar__footer">
+            <section class="form-section">
+              <h3 class="form-section__title">지문 작업 가능여부</h3>
+              <div class="form-field form-field--horizontal">
+                <label class="label">가능여부</label>
+                <select class="select__control">
+                  <option>가능</option>
+                  <option>불가능</option>
+                </select>
+              </div>
+            </section>
+            <button class="btn btn--primary btn--lg">제출하기</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+</body>
+</html>

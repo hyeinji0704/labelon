@@ -1,0 +1,60 @@
+/* ==========================================================================
+   accordion.css  v1.0 (2025-09-24)
+   목적: Accordion 컴포넌트 스타일
+   ========================================================================== */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.accordion-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1.5px solid #79AEFF;
+}
+
+.accordion-item__header {
+  width: 100%;
+  padding: 12px 22px;
+  background: var(--color-bg);
+  cursor: pointer;
+  border-radius: var(--radius-md);
+  transition: background 0.2s ease, color 0.2s ease;
+  color: #333; 
+}
+
+.accordion-item__title {
+  flex: 1;
+  text-align: left;
+}
+
+.accordion-item__icon {
+  transition: transform 0.2s ease, color 0.2s ease;
+  color: currentColor; 
+}
+
+.accordion-item__content {
+  display: none;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  padding: 16px 22px 20px 22px;
+  background: #F5F8FF;
+  line-height: 1.5;
+}
+
+.accordion-item.is-open {
+  border: 1px solid transparent;
+}
+.accordion-item.is-open .accordion-item__header {
+  background: #5B9CFF;
+  border-radius: 0;
+  color: #fff; 
+}
+.accordion-item.is-open .accordion-item__content {
+  display: flex;
+}
+.accordion-item.is-open .accordion-item__icon {
+  transform: rotate(180deg);
+}

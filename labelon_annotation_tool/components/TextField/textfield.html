@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TextField Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- TextField 전용 -->
+  <link rel="stylesheet" href="./textfield.css">
+</head>
+<body>
+
+  <!-- Default TextField -->
+  <div class="textfield">
+    <label class="textfield__label" for="tf1">기본 입력</label>
+    <textarea
+      id="tf1"
+      class="textfield__input textfield__input--default"
+      placeholder="내용을 입력하세요."
+    ></textarea>
+  </div>
+
+  <br>
+
+  <!-- Question Variant -->
+  <div class="textfield">
+    <label class="textfield__label" for="tf2">질문</label>
+    <textarea
+      id="tf2"
+      class="textfield__input textfield__input--question"
+      placeholder="질문을 입력하세요."
+    ></textarea>
+  </div>
+
+  <br>
+
+  <!-- Answer Variant -->
+  <div class="textfield">
+    <label class="textfield__label" for="tf3">답변</label>
+    <textarea
+      id="tf3"
+      class="textfield__input textfield__input--answer"
+      placeholder="답변을 입력하세요."
+    ></textarea>
+  </div>
+
+  <br>
+
+  <!-- Disabled -->
+  <div class="textfield is-disabled">
+    <label class="textfield__label" for="tf4">비활성화</label>
+    <textarea
+      id="tf4"
+      class="textfield__input textfield__input--default"
+      placeholder="입력 불가"
+      disabled
+    ></textarea>
+  </div>
+
+</body>
+</html>

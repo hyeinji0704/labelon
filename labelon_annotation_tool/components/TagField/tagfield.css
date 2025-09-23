@@ -1,0 +1,40 @@
+/* ==========================================================================
+   TagField Component Styles
+   ========================================================================== */
+
+.tag-field {
+  display: flex;
+  gap: 8px;
+}
+
+/* Column layout */
+.tag-field--column {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tag-field--column .textfield {
+  flex: 1;
+}
+
+.tag-field--column .textfield textarea {
+  min-height: 40px; /* TagField 안에서 최소 높이 */
+}
+
+/* Row layout */
+.tag-field--row {
+  flex-direction: row;
+  align-items: center;
+}
+
+.tag-field--row .tag {
+  flex-shrink: 0;
+}
+
+.tag-field--row .textfield {
+  flex: 1;
+}
+
+.tag-field--row .textfield textarea {
+  min-height: 40px;
+}

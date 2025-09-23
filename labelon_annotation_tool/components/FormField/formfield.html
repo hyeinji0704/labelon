@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FormField Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- Label & Select & FormField 전용 -->
+  <link rel="stylesheet" href="../Label/label.css">
+  <link rel="stylesheet" href="../Select/select.css">
+  <link rel="stylesheet" href="./formfield.css">
+</head>
+<body>
+
+  <!-- Vertical Layout -->
+  <div class="form-field form-field--vertical">
+    <div class="form-field__control">
+      <label class="label" for="country">국가 <span class="label__required">*</span></label>
+      <div class="select is-open">
+        <button type="button" class="select__control" id="country">
+          <span class="select__label">대한민국</span>
+          <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="select__menu">
+          <li class="select__option is-selected">대한민국</li>
+          <li class="select__option">일본</li>
+          <li class="select__option">미국</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+
+  <!-- Horizontal Layout -->
+  <div class="form-field form-field--horizontal">
+    <div class="form-field__control">
+      <label class="label" for="city">도시</label>
+      <div class="select">
+        <button type="button" class="select__control" id="city">
+          <span class="select__label">선택하세요</span>
+          <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="select__menu">
+          <li class="select__option">서울</li>
+          <li class="select__option">부산</li>
+          <li class="select__option">대구</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

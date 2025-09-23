@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Label Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+  <!-- Label 전용 -->
+  <link rel="stylesheet" href="./label.css">
+</head>
+<body>
+
+  <!-- 기본 라벨 -->
+  <label class="label" for="username">
+    사용자 이름
+  </label>
+  <input id="username" type="text" />
+
+  <br><br>
+
+  <!-- 필수 라벨 -->
+  <label class="label" for="email">
+    이메일 <span class="label__required">*</span>
+  </label>
+  <input id="email" type="email" />
+
+</body>
+</html>

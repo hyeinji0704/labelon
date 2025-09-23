@@ -1,0 +1,41 @@
+/* ==========================================================================
+   WorkBoardContent Component Styles
+   ========================================================================== */
+
+.workboard-content--1,
+.workboard-content--2 {
+  background: #fff;
+  padding: 36px 40px;
+  gap: 16px;
+}
+
+/* 1 Column */
+.workboard-content--1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* 2 Column */
+.workboard-content--2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px 24px; /* row-gap, column-gap */
+}
+
+/* Image Mode */
+.workboard-content--image img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* 샘플 박스 스타일 (테스트용) */
+.content-box {
+  padding: 16px;
+  border: 1px solid #ddd;
+  background: #f9f9f9;
+  text-align: center;
+}
+근데 

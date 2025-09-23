@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Header Component</title>
+
+  <!-- 공통 스타일 -->
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!-- Header 전용 -->
+  <link rel="stylesheet" href="./header.css">
+</head>
+<body>
+
+  <header class="header">
+    <!-- 로고 -->
+    <div class="header__logo">
+      <img src="../../images/labelon_logo.svg" alt="Logo" class="header__logo-img" />
+      <span class="header__appname">Label ON</span>
+    </div>
+
+    <!-- 우측 컨트롤 -->
+    <div class="header__controls">
+      <!-- 사용자 -->
+      <div class="header__user">
+        <img src="../../images/icons/icon-user.svg" alt="user" class="header__user-icon" />
+        <span class="header__username"><em>천수희</em>님</span>
+      </div>
+
+      <!-- 다크모드 토글 버튼 -->
+      <button class="header__mode-btn">
+        <img src="../../images/icons/moon.svg" alt="mode toggle" class="header__icon" />
+      </button>
+    </div>
+  </header>
+
+</body>
+</html>

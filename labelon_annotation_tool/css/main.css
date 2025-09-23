@@ -1,0 +1,41 @@
+/* main.css */
+
+/* 1. Reset (브라우저 기본 스타일 초기화) */
+@import url('./reset.css');
+
+/* 2. Variables (디자인 토큰: 컬러, 폰트, spacing 등) */
+@import url('./variables.css');
+
+/* 3. Utilities (flex, hidden 등 공통 유틸 클래스) */
+@import url('./utilities.css');
+
+/* 4. 이후에 컴포넌트별 CSS들을 추가로 import 가능 */
+
+/* ==========================================================================
+   MainPage Layout
+   ========================================================================== */
+
+.main-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background: #EFEFEF; /* 전체 배경 */
+}
+
+.main-page__body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.main-page__content {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.main-page__sidebar {
+  height: calc(100vh - 60px);
+}

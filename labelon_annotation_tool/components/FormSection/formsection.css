@@ -1,0 +1,17 @@
+/* ==========================================================================
+   FormSection Component Styles
+   ========================================================================== */
+
+.form-section__title {
+  font-size: 16px;   /* body1-bold 대체 */
+  line-height: 150%;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.form-section__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

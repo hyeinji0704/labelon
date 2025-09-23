@@ -1,0 +1,20 @@
+/* ==========================================================================
+   Label Component Styles
+   ========================================================================== */
+
+.label {
+  display: inline-block;
+  width: 124px;
+
+  /* body2-medium 대체 */
+  font-size: 15px;
+  line-height: 1.467; /* 146.7% */
+  font-weight: 500;
+
+  color: var(--color-semantic-label-neutral);
+}
+
+.label__required {
+  color: red;
+  margin-left: 2px;
+}

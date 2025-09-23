@@ -1,0 +1,32 @@
+/* ==========================================================================
+   FormField Component Styles
+   ========================================================================== */
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 제목 스타일 (추가 확장용) */
+.form-field__title {
+  font-size: 16px;    /* body1-bold 대체 */
+  line-height: 150%;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* 컨트롤 (Label + Select 묶음) */
+.form-field__control {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+/* 수평 배치 */
+.form-field--horizontal .form-field__control {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-left: 16px;
+}

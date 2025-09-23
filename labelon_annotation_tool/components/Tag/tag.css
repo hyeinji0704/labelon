@@ -1,0 +1,82 @@
+/* ==========================================================================
+   Tag & TagList Component Styles
+   ========================================================================== */
+
+.tag-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tag {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+/* === Variants === */
+.tag--default .tag__header {
+  background-color: #EAEDF3;
+}
+
+.tag--semantic .tag__header {
+  background-color: #f5f5f5;
+}
+
+/* === Header === */
+.tag__header {
+  flex-shrink: 0;
+  min-width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 10px;
+  border-radius: 8px;
+}
+
+/* === Icon === */
+.tag__icon {
+  width: 16px;
+  height: 16px;
+}
+
+/* === Label === */
+.tag__label {
+  font-size: 15px;       /* body2-medium 대체 */
+  line-height: 1.467;
+  font-weight: 500;
+  color: #464c55;
+}
+
+/* === Content List === */
+.tag__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tag__content {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 4px;
+
+  font-size: 16px;       /* body1-medium 대체 */
+  line-height: 1.5;
+  font-weight: 500;
+  word-break: keep-all;
+  white-space: normal;
+}
+
+/* Custom bullet */
+.tag__content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  background: #5F6775;
+  border-radius: 50%;
+  width: 5px;
+  height: 5px;
+}
