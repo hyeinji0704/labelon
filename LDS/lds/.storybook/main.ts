@@ -1,29 +1,19 @@
-import path from 'path';
 import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|ts|tsx|mdx)'],
-  addons: [
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
+  "stories": [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
   ],
-  framework: {
-    name: '@storybook/react-vite',
-    options: {},
-  },
-  viteFinal: async (config) => {
-    config.resolve = {
-      ...config.resolve,
-      alias: {
-        ...config.resolve?.alias,
-        '@': path.resolve(__dirname, '../src'),
-        '@styles': path.resolve(__dirname, '../src/styles'),
-        '@components': path.resolve(__dirname, '../src/components'),
-      },
-    };
-    return config;
-  },
+  "addons": [
+    "@chromatic-com/storybook",
+    "@storybook/addon-docs",
+    "@storybook/addon-a11y",
+    "@storybook/addon-vitest"
+  ],
+  "framework": {
+    "name": "@storybook/react-vite",
+    "options": {}
+  }
 };
-
 export default config;
