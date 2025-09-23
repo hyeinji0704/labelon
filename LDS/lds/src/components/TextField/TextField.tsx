@@ -1,16 +1,10 @@
-import React from 'react';
+import React, { useId, useRef, useEffect } from 'react';
 import './TextField.scss';
 
-export interface TextFieldProps {
-  /** label (라벨 텍스트) */
+export interface TextFieldProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   label?: string;
-  /** placeholder */
-  placeholder?: string;
-  /** 현재 값 */
-  value?: string;
-  /** 질문 / 답변 variant */
-  variant?: 'question' | 'answer';
-  /** 값 변경 핸들러 */
+  variant?: 'default' | 'question' | 'answer';
   onChange?: (value: string) => void;
 }
 
@@ -18,21 +12,51 @@ export const TextField: React.FC<TextFieldProps> = ({
   label,
   placeholder = '내용을 입력하세요.',
   value,
-  variant = 'question',
+  variant = 'default',
   onChange,
+  disabled = false,
+  ...rest
 }) => {
+  const id = useId();
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
   const handleChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    onChange?.(e.target.value);
+    if (!disabled) {
+      onChange?.(e.target.value);
+    }
+
+    // ✅ 입력될 때마다 높이 자동 조정
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto'; // 기존 높이 리셋
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
   };
 
+  // ✅ 초기값 있을 때도 높이 맞춤
+  useEffect(() => {
+    if (textareaRef.current) {
+      textareaRef.current.style.height = 'auto';
+      textareaRef.current.style.height = `${textareaRef.current.scrollHeight}px`;
+    }
+  }, [value]);
+
   return (
-    <div className="textfield">
-      {label && <label className="textfield__label">{label}</label>}
+    <div className={`textfield ${disabled ? 'is-disabled' : ''}`}>
+      {label && (
+        <label className="textfield__label" htmlFor={id}>
+          {label}
+        </label>
+      )}
       <textarea
+        ref={textareaRef}
+        id={id}
+        rows={1}
         className={`textfield__input textfield__input--${variant}`}
         placeholder={placeholder}
         value={value}
         onChange={handleChange}
+        disabled={disabled}
+        {...rest}
       />
     </div>
   );

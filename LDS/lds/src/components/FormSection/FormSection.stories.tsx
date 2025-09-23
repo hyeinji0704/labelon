@@ -27,6 +27,7 @@ export const Example: Story = {
   ),
 };
 
+
 export const WithAccordionItems: Story = {
   render: () => (
     <FormSection title="질문 세트">
@@ -58,3 +59,7 @@ export const WithAccordionItems: Story = {
     </FormSection>
   ),
 };
+
+
+Example.storyName = 'FormFiled 예시';  // ✅ 사이드바 표시명 변경
+WithAccordionItems.storyName = 'Accordion 예시';  // ✅ 사이드바 표시명 변경

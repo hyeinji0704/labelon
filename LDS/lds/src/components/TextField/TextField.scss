@@ -13,24 +13,52 @@
 
   &__input {
     width: auto;
-    padding: 8px 14px;
+    padding: 6px 14px;
     border: 1px solid #CED4DA;
     border-radius: 6px;
     @include body1($font-weight-normal);
     resize: none;
     outline: none;
     background: #FCFCFC;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    height: auto;
+  overflow-y: hidden;
+    
 
     &::placeholder {
       color: #999;
     }
 
-    &--question {
-      min-height: 56px; // 질문 높이
+    &:hover {
+      border-color: #ADB5BD;
     }
 
-    &--answer {
-      min-height: 90px; // 답변 높이
+    &:focus {
+      border-color: var(--color-brand-primary, #2970FF);
+      box-shadow: 0 0 0 2px rgba(41, 112, 255, 0.2);
     }
+
+    &:disabled {
+      background: #F1F3F5;
+      color: #868E96;
+      cursor: not-allowed;
+    }
+  }
+
+  // ✅ variant별 높이 + 배경색 제어
+  &__input--default {
+    min-height: 40px;
+    background: #ffffff;
+  }
+
+  &__input--question {
+    min-height: 56px;
+    background: #FCFCFC;
+  }
+
+  &__input--answer {
+    min-height: 90px;
+    background: #F9FAFB;
+    overflow-y: auto;
   }
 }

@@ -1,0 +1,31 @@
+.tag-field {
+  display: flex;
+  gap: 8px;
+
+  &--column {
+    flex-direction: column;
+    align-items: flex-start;
+    .text-field {
+      flex: 1;
+      textarea {
+        min-height: 40px; // TagField 안에서만 최소 높이 적용
+      }
+    }
+  }
+
+  &--row {
+    flex-direction: row;
+    align-items: center;
+
+    .tag {
+      flex-shrink: 0;
+    }
+
+    .text-field {
+      flex: 1;
+      textarea {
+        min-height: 40px; // TagField 안에서만 최소 높이 적용
+      }
+    }
+  }
+}

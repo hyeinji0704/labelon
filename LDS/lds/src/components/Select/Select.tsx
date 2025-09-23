@@ -7,7 +7,6 @@ interface Option {
 }
 
 interface SelectProps {
-  label?: string;
   options: Option[];
   placeholder?: string;
   disabled?: boolean;
@@ -15,7 +14,6 @@ interface SelectProps {
 }
 
 export const Select: React.FC<SelectProps> = ({
-  label,
   options,
   placeholder = '선택하세요',
   disabled = false,
@@ -25,7 +23,7 @@ export const Select: React.FC<SelectProps> = ({
   const [selected, setSelected] = useState<Option | null>(null);
   const selectRef = useRef<HTMLDivElement>(null);
 
-  // 외부 클릭 감지 → 드롭다운 닫기
+  // 외부 클릭 감지
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (selectRef.current && !selectRef.current.contains(e.target as Node)) {
@@ -47,12 +45,7 @@ export const Select: React.FC<SelectProps> = ({
   };
 
   return (
-    <div
-      className={`select ${disabled ? 'is-disabled' : ''}`}
-      ref={selectRef}
-    >
-      {label && <label className="select__label">{label}</label>}
-
+    <div className={`select ${disabled ? 'is-disabled' : ''}`} ref={selectRef}>
       <div
         className={`select__control ${isOpen ? 'is-open' : ''}`}
         role="button"

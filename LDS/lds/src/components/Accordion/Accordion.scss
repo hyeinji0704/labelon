@@ -14,8 +14,9 @@
     @include body1($font-weight-medium);
     width: 100%;
     padding: 12px 22px;
-    background: var(--color-semantic-background-alternative);
-    border: none;
+    // background: var(--color-semantic-background-alternative);
+    border: 1.5px solid #79AEFF;
+    border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -42,6 +43,9 @@
   }
 
   &.is-open .accordion-item__header {
-    background: var(--color-semantic-background-point-normal);
+    background: #5B9CFF;
+    border-radius: 0;
+    border: 1px solid transparent;
+    color: #fff;
   }
 }
