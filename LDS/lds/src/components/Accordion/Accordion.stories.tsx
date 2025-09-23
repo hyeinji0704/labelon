@@ -7,6 +7,9 @@ import { TagList } from '../Tag/TagList';
 const meta: Meta<typeof Accordion> = {
   title: 'Components/Accordion',
   component: Accordion,
+  parameters: {
+    layout: 'padded',
+  },
   argTypes: {
     showForm: { control: 'boolean' },
     showTags: { control: 'boolean' },

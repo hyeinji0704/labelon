@@ -5,6 +5,9 @@ import { TagField } from '../TagField/TagField';
 const meta: Meta<typeof WorkBoard> = {
   title: 'Components/WorkBoard',
   component: WorkBoard,
+  parameters: {
+    layout: 'padded',
+  },
   argTypes: {
     mode: {
       control: 'radio',
