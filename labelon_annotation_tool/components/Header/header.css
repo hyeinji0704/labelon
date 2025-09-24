@@ -7,8 +7,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #EAEBEC;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border-4);
   height: 60px;
 }
 
@@ -42,13 +42,23 @@
   height: 32px;
   border-radius: 50%;
   border: none;
-  background: #f1f3f5;
+  background: var(--bg-disabled);
   cursor: pointer;
   transition: background 0.2s;
 }
+
 .header__mode-btn:hover {
-  background: #e9ecef;
+  background: var(--bg-point-1);
 }
+
+/* 라이트 모드 → moon 보임 */
+.header__mode-btn .icon-moon { display: inline; }
+.header__mode-btn .icon-sun { display: none; }
+
+/* 다크 모드 → sun 보임 */
+[data-theme="dark"] .header__mode-btn .icon-moon { display: none; }
+[data-theme="dark"] .header__mode-btn .icon-sun { display: inline; }
+
 .header__icon {
   width: 18px;
   height: 18px;
@@ -58,17 +68,17 @@
 .header__user {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 .header__user-icon {
-  width: 36px;
-  height: 36px;
+  width: 21px;
+  height: 21px;
 }
 .header__username {
   font-size: 16px;
   line-height: 1.5;
   font-weight: 400;
-  color: #171719;
+  color: var(--text-1);
 }
 .header__username em {
   font-weight: 700;

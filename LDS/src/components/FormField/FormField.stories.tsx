@@ -1,0 +1,33 @@
+import type { Meta, StoryObj } from "@storybook/react";
+import { FormField } from "./FormField";
+
+const meta: Meta<typeof FormField> = {
+	title: "Components/FormField",
+	component: FormField,
+	tags: ["autodocs"],
+	argTypes: {
+		label: { control: "text" },
+		required: { control: "boolean" },
+		layout: {
+			control: { type: "radio" },
+			options: ["horizontal", "vertical"],
+		},
+		id: { control: false }, // 내부적으로 Label-Select 연결에 사용되지만 컨트롤로는 의미 없음
+	},
+};
+
+export default meta;
+type Story = StoryObj<typeof FormField>;
+
+export const Default: Story = {
+	args: {
+		label: "유형",
+		required: false,
+		layout: "horizontal",
+		options: [
+			{ value: "basic", label: "기본형" },
+			{ value: "advanced", label: "고급형" },
+		],
+		value: "basic",
+	},
+};

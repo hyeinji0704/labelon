@@ -14,17 +14,18 @@
   min-width: 460px;
   width: 460px;
   height: 100%;
-  background: #fff;
-  border-left: 1px solid #EAEBEC;
+  background: var(--bg-1);
+  border-left: 1px solid var(--border-4);
   display: flex;
   flex-direction: column;
-  box-shadow: -2px 0 16px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   transition: transform 0.3s ease;
 }
 
 /* 열림 상태 */
 .sidebar.is-open {
   display: inline-flex;
+  
 }
 
 /* 닫힘 상태 */
@@ -35,8 +36,8 @@
   height: fit-content;
   min-width: 284px;
   border-radius: 12px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08),
-              0 4px 8px rgba(0, 0, 0, 0.06);
+  box-shadow: var(--shadow-combined);
+  background-color: var(--bg-3);
 }
 .sidebar.is-closed .sidebar__header {
   border-bottom: 1px solid transparent;
@@ -51,9 +52,9 @@
 .sidebar__header {
   display: flex;
   align-items: center;
-  padding: 10px 12px 10px 24px;
+  padding: 20px 12px 20px 24px;
   justify-content: space-between;
-  border-bottom: 1px solid #EAEBEC;
+  border-bottom: 1px solid var(--border-4);
 }
 .sidebar__title-group {
   display: flex;
@@ -71,7 +72,25 @@
   background: none;
   border: none;
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
+
+/* 라이트 모드 → 기본 닫기 아이콘 보임 */
+.sidebar__close img:nth-child(1) { display: inline; }
+.sidebar__close img:nth-child(2) { display: none; }
+
+/* 다크 모드 → 다크용 닫기 아이콘 보임 */
+[data-theme="dark"] .sidebar__close img:nth-child(1) { display: none; }
+[data-theme="dark"] .sidebar__close img:nth-child(2) { display: inline; }
+
+/* 라이트 모드 → 기본 아이콘 */
+.sidebar-toggle .icon-sidebar-light { display: inline; }
+.sidebar-toggle .icon-sidebar-dark { display: none; }
+
+/* 다크 모드 → 다크 아이콘 */
+[data-theme="dark"] .sidebar-toggle .icon-sidebar-light { display: none; }
+[data-theme="dark"] .sidebar-toggle .icon-sidebar-dark { display: inline; }
 
 /* Body */
 .sidebar__body {
@@ -83,13 +102,13 @@
   padding: 24px 0;
 }
 .sidebar__body .form-section--with-border {
-  border-bottom: 1px solid #DCDCDC;
+  border-bottom: 1px solid var(--border-3);
 }
 
 /* Footer */
 .sidebar__footer {
   padding: 24px;
-  border-top: 1px solid #e1e1e2;
+  border-top: 1px solid var(--border-4);
 }
 .sidebar__footer .btn {
   width: 100%;

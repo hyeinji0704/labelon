@@ -4,9 +4,10 @@
 
 .workboard-content--1,
 .workboard-content--2 {
-  background: #fff;
+  background: var(--bg-1);
   padding: 36px 40px;
   gap: 16px;
+  box-shadow: var(--shadow-lg);
 }
 
 /* 1 Column */
@@ -24,6 +25,11 @@
 }
 
 /* Image Mode */
+.workboard-content--image {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 .workboard-content--image img {
   display: block;
   max-width: 100%;
@@ -38,4 +44,3 @@
   background: #f9f9f9;
   text-align: center;
 }
-근데 

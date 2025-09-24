@@ -1,0 +1,70 @@
+@use '../../styles/mixins' as *;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #ffffff;
+  border-bottom: 1px solid #EAEBEC;
+  height: 60px;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+
+    &-img {
+      width: 100px;
+      height: auto;
+    }
+
+    .header__appname {
+      font-size: 0;
+      line-height: 0;
+    }
+  }
+
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  &__mode-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: none;
+    background: #f1f3f5;
+    cursor: pointer;
+
+    &:hover {
+      background: #e9ecef;
+    }
+
+    .header__icon {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__user {
+    display: flex;
+    align-items: center;
+
+    &-icon {
+      width: 36px;
+      height: 36px;
+    }
+
+    .header__username {
+      @include body1($font-weight-normal);
+      color: #171719;
+      em {
+        @include body1($font-weight-bold);
+      }
+    }
+  }
+}

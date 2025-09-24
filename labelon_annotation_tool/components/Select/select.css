@@ -27,29 +27,29 @@
   padding: 8px 12px 8px 20px;
   border-radius: var(--radius-md);
 
-  color: var(--color-semantic-label-normal);
-  background-color: var(--color-semantic-background-alternative);
-  border: 1px solid var(--color-semantic-line-neutral);
+  color: var(--text-1);
+  background-color: var(--bg-2);
 
   cursor: pointer;
   transition: background-color .2s ease, color .2s ease, border-color .2s ease, box-shadow .2s ease;
 }
 
 .select__control:hover {
-  background-color: var(--color-semantic-btn-secondary-hover);
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: var(--shadow-focus-primary);
 }
 
 .select__control:focus,
 .select__control:focus-visible {
   outline: none;
-  border-color: var(--color-semantic-primary-normal);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-semantic-primary-normal), transparent 70%);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-focus-primary);
 }
 
-/* 라벨(텍스트) - 넘침 처리 */
 .select__label {
   flex: 1;
-  min-width: 0;            /* flex overflow 방지 */
+  min-width: 0;            
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -66,8 +66,8 @@
 
 /* 열림 상태 */
 .select.is-open .select__control {
-  border-color: var(--color-semantic-primary-normal);
-  box-shadow: 0 0 0 2px color-mix(in srgb, var(--color-semantic-primary-normal), transparent 70%);
+  border-color: var(--primary);
+  box-shadow: var(--shadow-focus-primary);
 }
 .select.is-open .select__icon {
   transform: rotate(180deg);
@@ -77,11 +77,10 @@
 .select__menu {
   position: absolute;
   inset-inline: 0;         /* left:0; right:0; */
-  top: calc(100% + 4px);
 
-  background: var(--color-semantic-background-normal);
-  color: var(--color-semantic-label-normal);
-  border: 1px solid var(--color-semantic-line-neutral);
+  background: var(--inverse-text);
+  color: var(--text-1);
+  border: 1px solid var(--border-1);
   border-radius: var(--radius-md);
   overflow: auto;
   max-height: 240px;
@@ -93,6 +92,21 @@
   transform: translateY(4px);
   transition: opacity .16s ease, transform .16s ease, visibility 0s linear .16s;
 }
+
+/* ▼ 아래로 열릴 때 */
+.select__menu--bottom {
+  top: calc(100% + 4px);
+  bottom: auto;
+  transform: translateY(4px);
+}
+
+/* ▲ 위로 열릴 때 */
+.select__menu--top {
+  bottom: calc(100% + 4px);
+  top: auto;
+  transform: translateY(-4px);
+}
+
 
 /* 열림 시 메뉴 표시 */
 .select.is-open .select__menu {
@@ -114,11 +128,6 @@
 
 .select__option:hover {
   /* hover/selected 기본값이 없으면 fallback 사용 */
-  background: var(--color-hover, #f5f5f5);
+  background: var(--bg-2);
 }
 
-.select__option.is-selected,
-.select__option[aria-selected="true"] {
-  font-weight: var(--font-weight-medium);
-  background: var(--color-selected, #e6f0ff);
-}

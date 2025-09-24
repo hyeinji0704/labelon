@@ -11,7 +11,7 @@
   line-height: 1.467; /* 146.7% */
   font-weight: 500;
 
-  color: var(--color-semantic-label-neutral);
+  color: #838386;
 }
 
 .label__required {

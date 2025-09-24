@@ -1,0 +1,36 @@
+@use './_reset';
+@use './_mixins';
+@use './tokens';
+@use './theme.light' as theme-light;
+@use './theme.dark' as theme-dark;
+
+
+/* 폰트 연결 */
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 400;
+  src: url('/fonts/Pretendard-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 500;
+  src: url('/fonts/Pretendard-Medium.woff') format('woff');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Pretendard';
+  font-weight: 700;
+  src: url('/fonts/Pretendard-Bold.woff') format('woff');
+  font-display: swap;
+}
+
+
+html, body, #root {
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: var(--font-size-15); // 기본 body 크기
+  color: var(--color-semantic-label-normal);
+}

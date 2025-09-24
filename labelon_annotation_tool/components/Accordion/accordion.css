@@ -12,18 +12,22 @@
 .accordion-item {
   border-radius: var(--radius-md);
   overflow: hidden;
-  border: 1.5px solid #79AEFF;
+  border: 1.5px solid var(--primary-2);
+}
+.accordion-item:hover {
+  border: 1.5px solid var(--primary);
 }
 
 .accordion-item__header {
   width: 100%;
   padding: 12px 22px;
-  background: var(--color-bg);
   cursor: pointer;
   border-radius: var(--radius-md);
   transition: background 0.2s ease, color 0.2s ease;
-  color: #333; 
+  color: var(--text-1);        
 }
+
+
 
 .accordion-item__title {
   flex: 1;
@@ -40,7 +44,7 @@
   flex-direction: column;
   gap: var(--spacing-md);
   padding: 16px 22px 20px 22px;
-  background: #F5F8FF;
+  background: var(--primary-3);
   line-height: 1.5;
 }
 
@@ -48,7 +52,7 @@
   border: 1px solid transparent;
 }
 .accordion-item.is-open .accordion-item__header {
-  background: #5B9CFF;
+  background: var(--primary-1);
   border-radius: 0;
   color: #fff; 
 }

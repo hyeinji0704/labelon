@@ -9,8 +9,8 @@
 /* === 개별 컴포넌트 === */
 @import url("../components/Header/header.css");
 @import url("../components/WorkBoard/workboard.css");
-@import url("../components/WorkBoardHeader/workboard-header.css");
-@import url("../components/WorkBoardContent/workboard-content.css");
+@import url("../components/WorkBoard/WorkBoardHeader/workboard-header.css");
+@import url("../components/WorkBoard/WorkBoardContent/workboard-content.css");
 @import url("../components/Sidebar/sidebar.css");
 @import url("../components/Accordion/accordion.css");
 @import url("../components/Button/button.css");

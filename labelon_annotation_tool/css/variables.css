@@ -17,15 +17,18 @@ body {
   text-rendering: optimizeLegibility;
 
   font-family:
-    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial,
-    "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
-    "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-    sans-serif;
+  "Pretendard",
+  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial,
+  "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic",
+  "Noto Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  sans-serif;
+
   font-size: 1.6rem; /* 16px */
   font-weight: 400;
   letter-spacing: -0.01em;
   word-break: keep-all;
+  color: var(--text-1);
 }
 
 /* 기본 컬러/폰트/레이아웃 토큰 */
@@ -45,40 +48,45 @@ body {
   --radius-md: 8px;
   --radius-lg: 12px;
   
-  /* Static */
-  --color-semantic-static-white: #ffffff;
-  --color-semantic-static-black: #171719;
+  /* 주요 색상 */
+  --primary: #0066FF;
+  --primary-1: #5B9CFF;
+  --primary-2: #79AEFF;
+  --primary-3: #F5F8FF;
 
-  /* Primary */
-  --color-semantic-primary-normal: #0066ff;
 
-  /* Label */
-  --color-semantic-label-neutral: #838386;
-  --color-semantic-label-normal: #171719; /* opacity 72%까지 UI단에서 조절 */
-  --color-semantic-label-strong: rgba(23, 23, 25, 0.5); /* opacity 50%까지 UI단에서 조절 */
+  /* 텍스트 */
+  --text-1: #171719;         /* 기본 텍스트 */
+  --text-2: #838386;         /* 보조 텍스트 */
+  --text-3: rgba(23, 23, 25, 0.72); /* 흐린 텍스트 */
+  --text-4: #464c55;
+  --text-5: #868E96;
 
-  /* Background */
-  --color-semantic-background-normal: #ffffff;
-  --color-semantic-background-alternative: #f5f5f5;
-  --color-semantic-background-elevated-normal: #efefef;
-  --color-semantic-background-elevated-alternative: #e4e4e4;
-  --color-semantic-background-point-normal: #e4edff;
-  --color-semantic-background-point-alternative: rgba(228, 237, 255, 0.36);
-  --color-semantic-background-input-normal: #fcfcfc;
+  /* 배경 */
+  --bg-1: #ffffff;           /* 기본 배경 */
+  --bg-2: #f5f5f5;           /* 보조 배경 */
+  --bg-3: #ffffff;  
+  --bg-elevated-1: #efefef;   /* 떠있는 요소 배경 1 */
+  --bg-elevated-2: #e4e4e4;   /* 떠있는 요소 배경 2 */
+  --bg-point: #e4edff;        /* 포인트 배경 */
+  --bg-point-1: #e9ecef;  
+  --bg-input: #fcfcfc;        /* 입력창 배경 */
+  --bg-default: #EAEFF7;        
+  --bg-semantic: #EAEDF3;  
+  --bg-disabled: #F1F3F5;  
+ 
 
-  /* Fill */
-  --color-semantic-fill-icon-normal: #b1b1b1;
-  --color-semantic-fill-icon-alternative: #a6b1c5;
+  /* 라인/테두리 */
+  --border-1: #ced4da;       /* 기본 테두리 */
+  --border-2: #e2e3e4;       /* 연한 테두리 */
+  --border-3: #dcdcdc;       /* 중립 테두리 */
+  --border-4: #eaebec;       /* 강한 테두리 */
+  --border-5: #ADB5BD;       /* 강한 테두리 */
 
-  /* Line */
-  --color-semantic-line-normal: #ced4da;
-  --color-semantic-line-alternative: #e2e3e4;
-  --color-semantic-line-neutral: #dcdcdc;
-  --color-semantic-line-solid-normal: #eaebec;
-
-  /* Inverse */
-  --color-semantic-inverse-label: #ffffff;
-  --color-semantic-inverse-background: #ffffff;
+  /* 반전 색상 */
+  --inverse-text: #ffffff;
+  --inverse-bg: #171719;      /* 다크모드 컴포넌트용 배경 */
+  --inverse-elevated: #5F6775;      /* 다크모드 컴포넌트용 배경 */
 
   /* Button - Primary */
   --color-semantic-btn-primary-normal: #0066ff;
@@ -92,46 +100,59 @@ body {
   --color-semantic-btn-secondary-focus: #f1f1f1;
   --color-semantic-btn-secondary-disabled: #a6b1c5;
   --color-semantic-btn-secondary-border: #cdcdcf;
+
+  --shadow-focus-primary: 0 0 0 2px color-mix(in srgb, var(--primary), transparent 70%);
+
+  --shadow-combined: 
+    0 2px 4px rgba(0, 0, 0, 0.08),   /* 작은 바깥 그림자 */
+    0 4px 8px rgba(0, 0, 0, 0.06),   /* 중간 바깥 그림자 */
+    inset 0 2px 6px rgba(0, 0, 0, 0.03); /* ✨ 더 옅고 부드러운 이너 쉐도우 */
+  --shadow-md: -2 0 16px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 0 20px rgba(0, 0, 0, 0.12); /* 요청 주신 값 */
 }
 
 /* ==============================
    Dark Theme
    ============================== */
 :root[data-theme='dark'] {
-  /* Static */
-  --color-semantic-static-white: #ffffff;
-  --color-semantic-static-black: #171719;
+  /* 주요 색상 */
+  --primary: #1A75FF;
+  --primary-1: #3385FF;
+  --primary-2: #5c759e;
+  --primary-3: #1B1D1E;
 
-  /* Primary */
-  --color-semantic-primary-normal: #1975ff;
+  /* 텍스트 */
+  --text-1: #ffffff;         /* 기본 텍스트 */
+  --text-2: #838386;         /* 보조 텍스트 */
+  --text-3: rgba(255,255,255,.5);         /* 강한 텍스트 (보조와 동일값 사용) */
+  --text-4: #f0f0f0;
+  --text-5: rgba(152, 155, 162,.16);
 
-  /* Label */
-  --color-semantic-label-neutral: #838386;
-  --color-semantic-label-normal: #ffffff; /* opacity 50%까지 UI단에서 조절 */
-  --color-semantic-label-strong: #838386;
+  /* 배경 */
+  --bg-1: #0d0d0d;           /* 기본 배경 */
+  --bg-2: rgba(36, 36, 36, 100);           /* 보조 배경 */
+  --bg-3: #272727;           /* 보조 배경 */
+  --bg-elevated-1: #1d1d1d;   /* 떠있는 요소 배경 1 */
+  --bg-elevated-2: #272727;   /* 떠있는 요소 배경 2 */
+  --bg-point: #1a1a1a;        /* 포인트 배경 */
+  --bg-point-1: #3A3D42; 
+  --bg-input: #101010;        /* 입력창 배경 */
+  --bg-default: #303235;        
+  --bg-semantic: #111417;  
+  --bg-disabled: #2E2F33;  
 
-  /* Background */
-  --color-semantic-background-normal: #0d0d0d;
-  --color-semantic-background-alternative: #171717;
-  --color-semantic-background-elevated-normal: #1d1d1d;
-  --color-semantic-background-elevated-alternative: #272727;
-  --color-semantic-background-point-normal: #1a1a1a;
-  --color-semantic-background-point-alternative: #171717;
-  --color-semantic-background-input-normal: #101010;
 
-  /* Fill */
-  --color-semantic-fill-icon-normal: #b1b1b1;
-  --color-semantic-fill-icon-alternative: #a6b1c5;
-
-  /* Line */
-  --color-semantic-line-normal: #303840;
-  --color-semantic-line-alternative: #27292a;
-  --color-semantic-line-neutral: #303030;
-  --color-semantic-line-solid-normal: #1f2122;
-
-  /* Inverse */
-  --color-semantic-inverse-label: #171719;
-  --color-semantic-inverse-background: #171719;
+  /* 라인/테두리 */
+  --border-1: #303840;       /* 기본 테두리 */
+  --border-2: #27292a;       /* 연한 테두리 */
+  --border-3: #303030;       /* 중립 테두리 */
+  --border-4: #1f2122;       /* 강한 테두리 */
+  --border-5: #495057;  
+  
+  /* 반전 색상 */
+  --inverse-text: #171719;
+  --inverse-bg: #ffffff;      /* 라이트모드 컴포넌트용 배경 */
+  --inverse-bg: #eeeeee;      /* 다크모드 컴포넌트용 배경 */
 
   /* Button - Primary */
   --color-semantic-btn-primary-normal: #1a75ff;
@@ -145,4 +166,13 @@ body {
   --color-semantic-btn-secondary-focus: #1b1b1b;
   --color-semantic-btn-secondary-disabled: #a6b1c5;
   --color-semantic-btn-secondary-border: #303030;
+
+  --shadow-focus-primary: 0 0 0 2px color-mix(in srgb, var(--primary), transparent 30%);
+
+ --shadow-combined:
+    0 2px 4px rgba(0, 0, 0, 0.4),       /* 작은 바깥 그림자 → 진하게 */
+    0 4px 8px rgba(0, 0, 0, 0.4),       /* 중간 바깥 그림자 → 진하게 */
+    inset 0 2px 4px rgba(255, 255, 255, 0.12); /* ✨ 이너 그림자 → 밝게 */
+  --shadow-md: -2 0 16px rgba(0, 0, 0, 0.16);
+  --shadow-lg: 0 0 20px rgba(0, 0, 0, 0.4); /* 요청 주신 값 */
 }

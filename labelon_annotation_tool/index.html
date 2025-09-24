@@ -21,9 +21,17 @@
           <img src="./images/icons/icon-user.svg" alt="user" class="header__user-icon">
           <span class="header__username"><em>천수희</em>님</span>
         </div>
-        <button class="header__mode-btn">
-          <img src="./images/icons/moon.svg" alt="mode toggle" class="header__icon">
-        </button>
+
+        <!-- 🌙 모드 전환 버튼 아이콘 표시 규칙
+        - header__mode-btn 은 moon, sun 2개의 버튼이 순서대로 들어있음
+        - 기본: 라이트 모드 → moon(1번째) 아이콘만 표시
+        - 다크 모드: sun(2번째) 아이콘만 표시
+        - .is-dark 클래스는 <html> 또는 <body>에 토글됨 -->
+
+         <button class="header__mode-btn" aria-label="모드 전환">
+        <img src="./images/icons/moon.svg" alt="다크 모드" class="icon-moon header__icon">
+        <img src="./images/icons/sun.svg" alt="라이트 모드" class="icon-sun header__icon">
+      </button>
       </div>
     </header>
 
@@ -50,62 +58,152 @@
             </div>
           </div>
 
-          <!-- WorkBoard Content -->
+          <!-- WorkBoard Content 영역
+              ✅ 변형 클래스 안내:
+                • .workboard-content--2
+                  → 콘텐츠가 "텍스트"인 경우 사용
+                • .workboard-content--image
+                  → 콘텐츠가 "이미지"인 경우 사용
+              
+              ⚠️ 두 클래스는 동시에 쓰지 않음 (상호 배타적)
+              → 상황에 맞는 하나만 선택해서 적용
+          -->
+
           <div class="workboard-content workboard-content--2">
             <div class="tag-field tag-field--column">
-              <div class="tag">
+              <div class="tag tag--default">
                 <div class="tag__header"><span class="tag__label">인증/등록번호</span></div>
               </div>
-              <textarea class="textfield__input textfield__input--default">ABC-12345</textarea>
+              <textarea rows="1" class="textfield__input textfield__input--default">ABC-12345</textarea>
             </div>
 
             <div class="tag-field tag-field--column">
-              <div class="tag">
+              <div class="tag tag--default">
                 <div class="tag__header"><span class="tag__label">기자재 명칭</span></div>
               </div>
-              <textarea class="textfield__input textfield__input--default">스마트폰</textarea>
+              <textarea rows="1" class="textfield__input textfield__input--default">스마트폰</textarea>
             </div>
 
             <div class="tag-field tag-field--column">
-              <div class="tag">
+              <div class="tag tag--default">
                 <div class="tag__header"><span class="tag__label">제조국가</span></div>
               </div>
-              <textarea class="textfield__input textfield__input--default">대한민국</textarea>
+              <textarea rows="1" class="textfield__input textfield__input--default">대한민국</textarea>
+            </div>
+
+             <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">인증/등록번호</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">ABC-12345</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">기자재 명칭</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">스마트폰</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">제조국가</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">대한민국</textarea>
+            </div>
+             <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">인증/등록번호</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">ABC-12345</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">기자재 명칭</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">스마트폰</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">제조국가</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">대한민국</textarea>
+            </div>
+             <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">인증/등록번호</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">ABC-12345</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">기자재 명칭</span></div>
+              </div>
+              <textarea rows="1" class="textfield__input textfield__input--default">스마트폰</textarea>
+            </div>
+
+            <div class="tag-field tag-field--column">
+              <div class="tag tag--default">
+                <div class="tag__header"><span class="tag__label">제조국가</span></div>
+              </div>
+              <textarea rows="2" class="textfield__input textfield__input--default">대한민국</textarea>
             </div>
           </div>
+          <!-- <div class="workboard-content workboard-content--image">
+            <img src="./images/sample-image.png" alt="샘플 이미지" />
+          </div> -->
         </div>
       </main>
 
-      <!-- Sidebar -->
-      <aside class="main-page__sidebar">
-        <div class="sidebar is-open">
-          <div class="sidebar__header">
-            <div class="sidebar__title-group">
-              <h2 class="sidebar__title">작업 현황</h2>
-              <button class="btn btn--secondary btn--sm">작업가이드</button>
-            </div>
-            <button class="sidebar__close">
-              <img src="./images/icons/icon-close.svg" alt="닫기">
-            </button>
+      <!-- Sidebar  -->
+      <!-- ✅ 열림 상태  -->
+      <aside class="sidebar is-open">
+        <!-- 상단 헤더 -->
+        <div class="sidebar__header">
+          <div class="sidebar__title-group">
+            <h2 class="sidebar__title">작업 현황</h2>
+            <button class="btn btn--secondary btn--sm">작업가이드</button>
           </div>
-          <div class="sidebar__body">
-            <section class="form-section form-section--with-border">
-              <h3 class="form-section__title">데이터 타입</h3>
-              <div class="form-field form-field--horizontal">
-                <label class="label">유형</label>
-                <select class="select__control">
-                  <option>기본형</option>
-                  <option>고급형</option>
-                </select>
-              </div>
-            </section>
+          <button class="sidebar__close" aria-label="모드 전환">
+        <img src="./images/icons/icon-close.svg" alt="다크 모드" >
+        <img src="./images/icons/icon-close-dark.svg" alt="라이트 모드" >
+      </button>
+        </div>
 
-            <section class="form-section">
+        <!-- 본문 -->
+        <div class="sidebar__body">
+          <section class="form-section form-section--with-border">
+            <h3 class="form-section__title">데이터 타입</h3>
+            <div class="form-field form-field--horizontal">
+              <div class="form-field__control">
+                  <label class="label">유형</label>
+                  <div class="select " role="combobox" aria-haspopup="listbox" aria-expanded="true">
+                    <button type="button" class="select__control" aria-label="옵션 선택됨: 옵션 2">
+                      <span class="select__label" title="옵션 2">옵션 2</span>
+                      <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </button>
+
+                    <ul class="select__menu select__menu--bottom" role="listbox" tabindex="-1">
+                      <li class="select__option" role="option">옵션 1</li>
+                      <li class="select__option is-selected" role="option" aria-selected="true">옵션 2</li>
+                      <li class="select__option" role="option">옵션 3 아주아주 긴 라벨 테스트용 텍스트</li>
+                    </ul>
+                  </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="form-section">
             <h3 class="form-section__title">질문 세트</h3>
             <div class="accordion">
               <div class="accordion-item is-open">
                 <button type="button" class="accordion-item__header flex-between">
-                  <span class="accordion-item__title">세트 01</span>
+                  <span class="accordion-item__title body1-medium">세트 01</span>
                   <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
             <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>
@@ -131,7 +229,7 @@
                     <div class="tag tag--default">
                       <div class="tag__header">
                         <img src="./images/icons/icon-tag__law.svg" alt="" class="tag__icon">
-                        <span class="tag__label">법령근거</span>
+                        <span class="tag__label ">법령근거</span>
                       </div>
                       <ul class="tag__list">
                         <li class="tag__content">제58조 2항</li>
@@ -145,7 +243,7 @@
 
               <div class="accordion-item">
                 <button type="button" class="accordion-item__header flex-between">
-                  <span class="accordion-item__title">세트 02</span>
+                  <span class="accordion-item__title body1-medium">세트 02</span>
                   <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
             <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>
@@ -153,24 +251,72 @@
               </div>
             </div>
           </section>
-          </div>
-          <div class="sidebar__footer">
-            <section class="form-section">
-              <h3 class="form-section__title">지문 작업 가능여부</h3>
-              <div class="form-field form-field--horizontal">
-                <label class="label">가능여부</label>
-                <select class="select__control">
-                  <option>가능</option>
-                  <option>불가능</option>
-                </select>
+        </div>
+
+        <!-- 푸터 -->
+        <div class="sidebar__footer">
+          <section class="form-section">
+            <h3 class="form-section__title">지문 작업 가능여부</h3>
+            <div class="form-field form-field--horizontal">
+              <div class="form-field__control">
+                  <label class="label">가능여부</label>
+                  <div class="select is-open" role="combobox" aria-haspopup="listbox" aria-expanded="true">
+                    <button type="button" class="select__control" aria-label="옵션 선택됨: 옵션 2">
+                      <span class="select__label" title="옵션 2">옵션 2</span>
+                      <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+                      </svg>
+                    </button>
+
+                    <ul class="select__menu select__menu--top" role="listbox" tabindex="-1">
+                      <li class="select__option" role="option">옵션 1</li>
+                      <li class="select__option is-selected" role="option" aria-selected="true">옵션 2</li>
+                      <li class="select__option" role="option">옵션 3 아주아주 긴 라벨 테스트용 텍스트</li>
+                    </ul>
+                  </div>
               </div>
-            </section>
-            <button class="btn btn--primary btn--lg">제출하기</button>
-          </div>
+            </div>
+          </section>
+          <button class="btn btn--primary btn--lg">제출하기</button>
         </div>
       </aside>
+
+       <!-- ✅ 닫힘 상태
+      <aside class="sidebar is-closed">
+        <div class="sidebar__header">
+          <h2 class="sidebar__title">작업 현황</h2>
+          <button class="sidebar-toggle" aria-label="사이드바 열기">
+            <img src="./images/icons/icon-sidebar-open.svg" alt="사이드바 열기 (라이트)" class="icon-sidebar-light">
+            <img src="./images/icons/icon-sidebar-open-dark.svg" alt="사이드바 열기 (다크)" class="icon-sidebar-dark">
+          </button>
+
+        </div>
+      </aside> -->
     </div>
   </div>
 
 </body>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.querySelector(".header__mode-btn");
+  const root = document.documentElement;
+
+  btn.addEventListener("click", () => {
+    const currentTheme = root.getAttribute("data-theme");
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+    root.setAttribute("data-theme", newTheme);
+
+    // ✅ 선택: 로컬스토리지 저장 → 새로고침해도 기억됨
+    localStorage.setItem("theme", newTheme);
+  });
+
+  // ✅ 페이지 처음 로드할 때 저장된 값 불러오기
+  const savedTheme = localStorage.getItem("theme");
+  if (savedTheme) {
+    root.setAttribute("data-theme", savedTheme);
+  }
+});
+
+</script>
+
 </html>

@@ -1,0 +1,28 @@
+@use '../../styles/mixins' as *;
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  &__title {
+    @include body1($font-weight-bold);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &--horizontal {
+    .form-field__control {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      margin-left: 16px;
+    }
+  }
+}
