@@ -25,6 +25,7 @@
 
   &__icon {
     transition: transform 0.2s ease;
+    color: currentColor; 
     &.rotate {
       transform: rotate(180deg);
     }
@@ -48,4 +49,9 @@
     border: 1px solid transparent;
     color: #fff;
   }
+
+  &.is-open .accordion-item__icon {
+    transform: rotate(180deg);
+  }
+ 
 }

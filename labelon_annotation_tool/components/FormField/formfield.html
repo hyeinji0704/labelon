@@ -19,7 +19,7 @@
   <div class="form-field form-field--vertical">
     <div class="form-field__control">
       <label class="label" for="country">국가 <span class="label__required">*</span></label>
-      <div class="select is-open">
+      <div class="select">
         <button type="button" class="select__control" id="country">
           <span class="select__label">대한민국</span>
           <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
@@ -41,18 +41,49 @@
   <br><br>
   <br><br>
 
-  <!-- Horizontal Layout -->
+  <!-- Horizontal Layout 아래로 열림-->
   <div class="form-field form-field--horizontal">
     <div class="form-field__control">
       <label class="label" for="city">도시</label>
-      <div class="select">
+      <div class="select  is-open">
         <button type="button" class="select__control" id="city">
           <span class="select__label">선택하세요</span>
           <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
             <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>
         </button>
-        <ul class="select__menu">
+        <ul class="select__menu select__menu--bottom">
+          <li class="select__option">서울</li>
+          <li class="select__option">부산</li>
+          <li class="select__option">대구</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+ <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+   <br><br>
+  <br><br>
+  <br><br>
+  <br><br>
+  <br><br> 
+
+
+   <!-- Horizontal Layout 위로 열림 -->
+  <div class="form-field form-field--horizontal">
+    <div class="form-field__control">
+      <label class="label" for="city">도시</label>
+      <div class="select  is-open">
+        <button type="button" class="select__control" id="city">
+          <span class="select__label">선택하세요</span>
+          <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="select__menu select__menu--top">
           <li class="select__option">서울</li>
           <li class="select__option">부산</li>
           <li class="select__option">대구</li>

@@ -24,6 +24,7 @@
   background-color: var(--bg-semantic);
 }
 
+
 /* === Header === */
 .tag__header {
   flex-shrink: 0;
@@ -46,7 +47,7 @@
   font-size: 15px;       /* body2-medium 대체 */
   line-height: 1.467;
   font-weight: 500;
-  color: var(--text-4);
+  color: var(--primary);
 }
 
 /* === Content List === */

@@ -30,22 +30,20 @@
 
 /* 닫힘 상태 */
 .sidebar.is-closed {
-  margin: 24px 10px;
   height: auto;
-  width: 284px;
-  height: fit-content;
-  min-width: 284px;
-  border-radius: 12px;
+  width: auto;
+  min-width: auto;
   box-shadow: var(--shadow-combined);
   background-color: var(--bg-3);
+  padding: 8px 10px;
 }
 .sidebar.is-closed .sidebar__header {
   border-bottom: 1px solid transparent;
-  padding: 10px 18px 10px 20px;
+  padding: 0;
 }
 .sidebar.is-closed .sidebar__header img {
-  width: 22px;
-  height: 22px;
+  width: 24px;
+  height: 24px;
 }
 
 /* Header */
@@ -74,6 +72,13 @@
   cursor: pointer;
   display: flex;
   align-items: center;
+}
+.sidebar-toggle {
+  padding: 8px;
+  border-radius: 8px;
+}
+.sidebar-toggle:hover {
+  background: var(--bg-elevated-1);
 }
 
 /* 라이트 모드 → 기본 닫기 아이콘 보임 */

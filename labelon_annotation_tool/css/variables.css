@@ -71,7 +71,7 @@ body {
   --bg-point: #e4edff;        /* 포인트 배경 */
   --bg-point-1: #e9ecef;  
   --bg-input: #fcfcfc;        /* 입력창 배경 */
-  --bg-default: #EAEFF7;        
+  --bg-default: #c5dcff;        
   --bg-semantic: #EAEDF3;  
   --bg-disabled: #F1F3F5;  
  
@@ -86,7 +86,7 @@ body {
   /* 반전 색상 */
   --inverse-text: #ffffff;
   --inverse-bg: #171719;      /* 다크모드 컴포넌트용 배경 */
-  --inverse-elevated: #5F6775;      /* 다크모드 컴포넌트용 배경 */
+  --inverse-elevated: #a2b0c9;      /* 다크모드 컴포넌트용 배경 */
 
   /* Button - Primary */
   --color-semantic-btn-primary-normal: #0066ff;
@@ -162,10 +162,10 @@ body {
 
   /* Button - Secondary */
   --color-semantic-btn-secondary-normal: #0d0d0d;
-  --color-semantic-btn-secondary-hover: #161616;
-  --color-semantic-btn-secondary-focus: #1b1b1b;
+  --color-semantic-btn-secondary-hover: #1d1d1d;
+  --color-semantic-btn-secondary-focus: #202020;
   --color-semantic-btn-secondary-disabled: #a6b1c5;
-  --color-semantic-btn-secondary-border: #303030;
+  --color-semantic-btn-secondary-border: #565656;
 
   --shadow-focus-primary: 0 0 0 2px color-mix(in srgb, var(--primary), transparent 30%);
 

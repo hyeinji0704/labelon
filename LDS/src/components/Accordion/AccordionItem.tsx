@@ -24,11 +24,19 @@ export const AccordionItem: React.FC<AccordionItemProps> = ({
 				onClick={() => setIsOpen(!isOpen)}
 			>
 				<span>{title}</span>
-				<img
-					src="/images/icons/icon-dropdown.svg"
-					alt="dropdown"
-					className="select__icon"
-				/>
+				<svg
+          className="accordion-item__icon"
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M6 9l6 6 6-6"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+          />
+        </svg>
 			</button>
 
 			{isOpen && (

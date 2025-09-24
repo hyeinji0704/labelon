@@ -10,6 +10,10 @@
 
   <!-- FormSection 전용 -->
   <link rel="stylesheet" href="./formsection.css">
+  <link rel="stylesheet" href="../Label/label.css">
+  <link rel="stylesheet" href="../Select/select.css">
+  <link rel="stylesheet" href="../Accordion/accordion.css">
+  <link rel="stylesheet" href="../FormField/formfield.css">
 </head>
 <body>
 
@@ -17,18 +21,77 @@
   <section class="form-section">
     <h3 class="form-section__title">데이터 타입</h3>
     <div class="form-section__content">
-      <p>여기에 Select, Input, Button 등 다양한 컴포넌트를 넣을 수 있습니다.</p>
+      <div class="form-field form-field--horizontal">
+    <div class="form-field__control">
+      <label class="label" for="city">도시</label>
+      <div class="select  is-open">
+        <button type="button" class="select__control" id="city">
+          <span class="select__label">선택하세요</span>
+          <svg class="select__icon" width="20" height="20" viewBox="0 0 24 24">
+            <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </button>
+        <ul class="select__menu select__menu--bottom">
+          <li class="select__option">서울</li>
+          <li class="select__option">부산</li>
+          <li class="select__option">대구</li>
+        </ul>
+      </div>
+    </div>
+  </div>
     </div>
   </section>
 
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
   <br>
 
   <!-- 예시: 질문 세트 섹션 -->
   <section class="form-section">
     <h3 class="form-section__title">질문 세트</h3>
     <div class="form-section__content">
-      <p>예시 항목 1</p>
-      <p>예시 항목 2</p>
+      <div class="accordion flex-column">
+    <!-- Accordion Item 1 -->
+    <div class="accordion-item is-open">
+      <button type="button" class="accordion-item__header flex-between body1-medium">
+        <span class="accordion-item__title body1-medium">제목 1</span>
+       <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+      <div class="accordion-item__content body2-normal">
+        <p>여기에 아코디언 내용 1이 들어갑니다.</p>
+      </div>
+    </div>
+
+    <!-- Accordion Item 2 -->
+    <div class="accordion-item">
+      <button type="button" class="accordion-item__header flex-between body1-medium">
+        <span class="accordion-item__title body1-medium">제목 2</span>
+        <svg class="accordion-item__icon" width="20" height="20" viewBox="0 0 24 24">
+          <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
+        </svg>
+      </button>
+      <div class="accordion-item__content body2-normal">
+        <p>여기에 아코디언 내용 2가 들어갑니다.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- (선택) 아코디언 토글 JS -->
+  <script>
+    document.querySelectorAll('.accordion-item__header').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.accordion-item');
+        item.classList.toggle('is-open');
+      });
+    });
+  </script>
     </div>
   </section>
 
