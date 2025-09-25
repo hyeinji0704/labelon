@@ -2,41 +2,40 @@ import React from "react";
 import "./Tag.scss";
 
 export interface TagProps {
-  /** 라벨 텍스트 */
   label: string;
   /** 태그 내용 목록 */
   contents?: string[];
-  /** 태그 스타일 */
   variant?: "default" | "semantic";
-  /** 다크 모드 여부 */
-  darkMode?: boolean;
-  /** 아이콘 (라이트/다크 모두 있으면 자동 전환, 없으면 표시 안함) */
-  icons?: {
-    light: string;
-    dark: string;
-  };
+  /** 아이콘 표시 여부 (스토리에서 끌 수 있음) */
+  showIcon?: boolean;
 }
 
 export const Tag: React.FC<TagProps> = ({
   label,
   contents,
   variant = "default",
-  darkMode,
-  icons = {
-    light: "/images/icons/icon-tag__law01.svg", // 기본 라이트 모드 아이콘
-    dark: "/images/icons/icon-tag__law02.svg", // 기본 다크 모드 아이콘
-  },
+  showIcon = true,
 }) => {
-   const list = contents || [];
+  const list = contents || [];
 
   return (
     <div className={`tag tag--${variant}`}>
       <div className="tag__header">
-        <img
-          src={darkMode ? icons.dark : icons.light}
-          alt="tag icon"
-          className="tag__icon"
-        />
+        {/* ✅ 아이콘은 필요할 때만 렌더 */}
+        {showIcon && (
+          <>
+            <img
+              src="/images/icons/icon-tag__law01.svg"
+              alt="라이트 모드"
+              className="tag__icon tag__icon--light"
+            />
+            <img
+              src="/images/icons/icon-tag__law02.svg"
+              alt="다크 모드"
+              className="tag__icon tag__icon--dark"
+            />
+          </>
+        )}
         <span className="tag__label">{label}</span>
       </div>
 

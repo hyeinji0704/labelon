@@ -16,24 +16,39 @@ export interface SidebarProps {
 	onClose?: () => void;
 	/** 열기 버튼 클릭 핸들러 */
 	onOpen?: () => void;
+  onToggleMode: () => void;
+  
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
 	isOpen = true,
 	onClose,
 	onOpen,
+  onToggleMode,
+  
 }) => {
 	if (!isOpen) {
 		return (
 			<aside className="sidebar is-closed">
 				<div className="sidebar__header">
-					<h2 className="sidebar__title">작업 현황</h2>
-					<button className="sidebar-toggle" onClick={onOpen}>
-						<img
-							src="/images/icons/icon-sidebar-open.svg"
-							alt="사이드바 열기"
-						/>
-					</button>
+          <button
+        className="sidebar-toggle"
+        onClick={() => {
+          onOpen?.();       
+          onToggleMode?.();  
+        }}
+      >
+        <img
+          src="/images/icons/icon-sidebar-open.svg"
+          alt="사이드바 열기"
+          className="sidebar__icon sidebar__icon--open-light"
+        />
+        <img
+          src="/images/icons/icon-sidebar-open-dark.svg"
+          alt="사이드바 열기"
+          className="sidebar__icon sidebar__icon--open-dark"
+        />
+      </button>
 				</div>
 			</aside>
 		);
@@ -47,9 +62,25 @@ export const Sidebar: React.FC<SidebarProps> = ({
 					<h2 className="sidebar__title">작업 현황</h2>
 					<Button label="작업가이드" variant="secondary" size="sm" />
 				</div>
-				<button className="sidebar__close" onClick={onClose}>
-					<img src="/images/icons/icon-close.svg" alt="닫기" />
-				</button>
+
+       <button
+        className="sidebar__close"
+        onClick={() => {
+          onClose?.();       
+          onToggleMode?.();  
+        }}
+      >
+        <img
+          src="/images/icons/icon-close.svg"
+          alt="닫기"
+          className="sidebar__icon sidebar__icon--close-light"
+        />
+        <img
+          src="/images/icons/icon-close-dark.svg"
+          alt="닫기"
+          className="sidebar__icon sidebar__icon--close-dark"
+        />
+      </button>
 			</div>
 
 			{/* 본문 */}
@@ -81,24 +112,18 @@ export const Sidebar: React.FC<SidebarProps> = ({
 								rows={4}
 							/>
 							<TagList
-                items={[
-                  {
-                    label: "법령근거",
-                    contents: [
-                      "제58조 2항",
-                      "시행령 제77조 2항",
-                      "방송통신기자재 적합성 평가",
-                    ],
-                    variant: "default",
-
-                    icons: {
-                      light: "/images/icons/icon-tag__law01.svg",
-                      dark: "/images/icons/icon-tag__law02.svg",
-                    },
-                  },
-                ]}
-              />
-
+								items={[
+									{
+										label: "법령근거",
+										contents: [
+											"제58조 2항",
+											"시행령 제77조 2항",
+											"방송통신기자재 적합성 평가",
+										],
+										variant: "default",
+									},
+								]}
+							/>
 						</AccordionItem>
 
 						<AccordionItem title="세트 02">

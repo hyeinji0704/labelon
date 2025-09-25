@@ -1,8 +1,8 @@
 import React from "react";
-import { Tag } from "../Tag/Tag";
 import type { TagProps } from "../Tag/Tag";
-import { TextField } from "../TextField/TextField";
+import { Tag } from "../Tag/Tag";
 import type { TextFieldProps } from "../TextField/TextField";
+import { TextField } from "../TextField/TextField";
 import "./TagField.scss";
 
 export interface TagFieldProps {
@@ -21,11 +21,11 @@ export const TagField: React.FC<TagFieldProps> = ({
 	direction = "column",
 }) => {
 	const defaultTag: TagProps = {
-		label: tag?.label || "항목",
-		icon: "",
-		contents: undefined,
-		variant: tag?.variant || "default",
-	};
+  label: tag?.label || "항목",
+  contents: undefined,
+  variant: tag?.variant || "default",
+  showIcon: false,   // ✅ 기본값은 아이콘 숨김
+};
 
 	return (
 		<div className={`tag-field tag-field--${direction}`}>

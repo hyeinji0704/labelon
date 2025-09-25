@@ -5,24 +5,15 @@ interface HeaderProps {
   logo: string;
   appName?: string;
   userName: string;
-  darkMode: boolean;
+  darkMode: boolean; // 유지
   onToggleMode: () => void;
-  icons?: {
-    moon: string;
-    sun: string;
-  };
 }
 
 export const Header: React.FC<HeaderProps> = ({
   logo,
   appName = 'Label ON',
   userName,
-  darkMode,
   onToggleMode,
-  icons = {
-    moon: '/images/icons/moon.svg',
-    sun: '/images/icons/sun.svg',
-  },
 }) => {
   return (
     <header className="header">
@@ -32,7 +23,7 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className="header__controls">
-        {/* ✅ user-icon은 고정 경로로 표시 */}
+        {/* ✅ 유저 아이콘: 원래 코드 그대로 */}
         <div className="header__user">
           <img
             src="../../images/icons/icon-user.svg"
@@ -46,9 +37,14 @@ export const Header: React.FC<HeaderProps> = ({
 
         <button className="header__mode-btn" onClick={onToggleMode}>
           <img
-            src={darkMode ? icons.sun : icons.moon}
-            alt="mode toggle"
-            className="header__icon"
+            src="/images/icons/moon.svg"
+            alt="moon icon"
+            className="header__icon header__icon--moon"
+          />
+          <img
+            src="/images/icons/sun.svg"
+            alt="sun icon"
+            className="header__icon header__icon--sun"
           />
         </button>
       </div>

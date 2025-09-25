@@ -1,5 +1,5 @@
+import type { Preview, StoryContext, StoryFn } from "@storybook/react-vite";
 import "@styles/globals.scss";
-import type { Preview, StoryFn, StoryContext } from "@storybook/react-vite";
 
 // 전역 테마 토글 설정
 export const globalTypes = {
@@ -20,12 +20,13 @@ export const globalTypes = {
 
 // Decorators
 export const decorators = [
-	(Story: StoryFn, context: StoryContext) => {
-		const theme = context.globals.theme || "light";
-		document.documentElement.setAttribute("data-theme", theme);
-		return Story(context.args, context);
-	},
+  (Story: StoryFn, context: StoryContext) => {
+    const theme = context.globals.theme || "light";
+    document.documentElement.setAttribute("data-theme", theme);
+    return Story(context.args, context);
+  },
 ];
+
 
 const preview: Preview = {
 	parameters: {

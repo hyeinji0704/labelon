@@ -13,10 +13,6 @@ const meta: Meta<typeof MainPage> = {
 			options: ["image", "fields"],
 			description: "WorkBoard 표시 모드",
 		},
-		darkMode: {
-			control: "boolean",
-			description: "다크 모드 여부",
-		},
 		sidebarOpen: {
 			control: "boolean",
 			description: "사이드바 열림 여부",
@@ -30,7 +26,6 @@ type Story = StoryObj<typeof MainPage>;
 export const Playground: Story = {
 	args: {
 		workboardMode: "fields",
-		darkMode: false,
 		sidebarOpen: true,
 	},
 	render: (args) => <MainPage {...args} />,

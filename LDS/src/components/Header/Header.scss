@@ -70,3 +70,17 @@
     }
   }
 }
+
+
+.header__icon--sun {
+  display: none;
+}
+
+:root[data-theme="dark"] {
+  .header__icon--moon {
+    display: none;
+  }
+  .header__icon--sun {
+    display: inline-block;
+  }
+}

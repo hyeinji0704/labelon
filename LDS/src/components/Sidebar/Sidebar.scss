@@ -21,7 +21,6 @@
     width: fit-content;
     min-width: auto;
     box-shadow: var(--shadow-combined);
-    background-color: var(--bg-3);
     padding: 8px 10px;
     .sidebar__header {
       border-bottom: 1px solid transparent;
@@ -61,7 +60,7 @@
       padding: 8px;
       border-radius: 8px;
       &:hover {
-        background: var(--bg-elevated-1);
+        background: var(--bg-elevated-2);
       }
     }
   }
@@ -85,5 +84,21 @@
         width: 100%;
         margin-top: 24px;
     }
+  }
+}
+
+
+/* 기본 상태: 라이트 모드 아이콘만 보임 */
+.sidebar__icon--close-dark , .sidebar__icon--open-dark {
+  display: none;
+}
+
+/* 다크 모드일 때 아이콘 전환 */
+:root[data-theme="dark"] {
+  .sidebar__icon--close-light, .sidebar__icon--open-light {
+    display: none;
+  }
+  .sidebar__icon--close-dark, .sidebar__icon--open-dark {
+    display: inline-block;
   }
 }
