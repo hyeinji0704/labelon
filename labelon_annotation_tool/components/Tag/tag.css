@@ -42,12 +42,26 @@
   height: 16px;
 }
 
+.tag__icon--dark {
+  display: none;
+}
+
+[data-theme="dark"] {
+  .tag__icon--light {
+    display: none;
+  }
+  .tag__icon--dark {
+    display: inline-block;
+  }
+}
+
+
 /* === Label === */
 .tag__label {
   font-size: 15px;       /* body2-medium 대체 */
   line-height: 1.467;
   font-weight: 500;
-  color: var(--primary);
+  color: var(--text-1);
 }
 
 /* === Content List === */

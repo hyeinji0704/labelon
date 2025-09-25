@@ -2,7 +2,8 @@
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background: #EFEFEF; // 전체 배경
+  background: var(--bg-elevated-1); /* 전체 배경 */
+
 
   &__body {
     flex: 1;
@@ -12,7 +13,7 @@
 
   &__content {
     flex: 1;
-    padding: 24px;
+    padding: 40px 80px 0 80px; 
     display: flex;
     justify-content: center;
     align-items: flex-start;

@@ -1,7 +1,6 @@
 import React from 'react';
 import './Header.scss';
 
-
 interface HeaderProps {
   logo: string;
   appName?: string;
@@ -11,7 +10,6 @@ interface HeaderProps {
   icons?: {
     moon: string;
     sun: string;
-    user: { light: string; dark: string };
   };
 }
 
@@ -24,10 +22,6 @@ export const Header: React.FC<HeaderProps> = ({
   icons = {
     moon: '/images/icons/moon.svg',
     sun: '/images/icons/sun.svg',
-    user: {
-      light: '/images/icons/icon-user.svg',
-      dark: '/images/icons/icon-user-dark.svg',
-    },
   },
 }) => {
   return (
@@ -38,14 +32,16 @@ export const Header: React.FC<HeaderProps> = ({
       </div>
 
       <div className="header__controls">
-        
+        {/* ✅ user-icon은 고정 경로로 표시 */}
         <div className="header__user">
           <img
-            src={darkMode ? icons.user.dark : icons.user.light}
+            src="../../images/icons/icon-user.svg"
             alt="user"
             className="header__user-icon"
           />
-          <span className="header__username"><em>{userName}</em>님</span>
+          <span className="header__username">
+            <em>{userName}</em>님
+          </span>
         </div>
 
         <button className="header__mode-btn" onClick={onToggleMode}>

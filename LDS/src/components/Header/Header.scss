@@ -4,8 +4,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 12px 20px;
-  background: #ffffff;
-  border-bottom: 1px solid #EAEBEC;
+  background: var(--bg-1);
+  border-bottom: 1px solid var(--border-4);
   height: 60px;
 
   &__logo {
@@ -37,11 +37,11 @@
     height: 32px;
     border-radius: 50%;
     border: none;
-    background: #f1f3f5;
+    background: var(--bg-disabled);
     cursor: pointer;
 
     &:hover {
-      background: #e9ecef;
+      background: var(--bg-point-1);
     }
 
     .header__icon {
@@ -53,15 +53,17 @@
   &__user {
     display: flex;
     align-items: center;
+    gap: 2px;
 
     &-icon {
-      width: 36px;
-      height: 36px;
+      width: 20px;
+  height: 20px;
     }
 
     .header__username {
       @include body1($font-weight-normal);
-      color: #171719;
+      color: var(--text-1);
+
       em {
         @include body1($font-weight-bold);
       }

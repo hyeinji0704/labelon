@@ -81,18 +81,24 @@ export const Sidebar: React.FC<SidebarProps> = ({
 								rows={4}
 							/>
 							<TagList
-								items={[
-									{
-										label: "법령근거",
-										contents: [
-											"제58조 2항",
-											"시행령 제77조 2항",
-											"방송통신기자재 적합성 평가",
-										],
-										variant: "default",
-									},
-								]}
-							/>
+                items={[
+                  {
+                    label: "법령근거",
+                    contents: [
+                      "제58조 2항",
+                      "시행령 제77조 2항",
+                      "방송통신기자재 적합성 평가",
+                    ],
+                    variant: "default",
+
+                    icons: {
+                      light: "/images/icons/icon-tag__law01.svg",
+                      dark: "/images/icons/icon-tag__law02.svg",
+                    },
+                  },
+                ]}
+              />
+
 						</AccordionItem>
 
 						<AccordionItem title="세트 02">

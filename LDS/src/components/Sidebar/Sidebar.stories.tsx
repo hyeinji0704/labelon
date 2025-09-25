@@ -3,6 +3,16 @@ import { Sidebar } from './Sidebar';
 
 const meta: Meta<typeof Sidebar> = {
   title: 'Components/Sidebar',
+  parameters: {
+    layout: 'fullscreen',
+  },
+  decorators: [
+    (Story) => (
+      <div style={{ display: 'flex', justifyContent: 'flex-end', height: '100vh' }}>
+        <Story />
+      </div>
+    ),
+  ],
   component: Sidebar,
   argTypes: {
     isOpen: { control: 'boolean' },

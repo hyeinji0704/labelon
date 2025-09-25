@@ -3,32 +3,32 @@
 .sidebar {
   min-width: 460px;
   width: 460px;
-  background: #fff;
-  border-left: 1px solid #EAEBEC;
+  // height: 100%;
+  background: var(--bg-1);
+  border-left: 1px solid var(--border-4);
   display: flex;
   flex-direction: column;
-  box-shadow: -2px 0 16px 0 rgba(0, 0, 0, 0.08);
+  box-shadow: var(--shadow-md);
   height: calc(100vh - 60px);
-
   transition: transform 0.3s ease;
+
     &.is-open {
     display: inline-flex;
   }
 
   &.is-closed {
-    margin: 24px 10px;
-    height: auto;
-    width: 284px;
-    min-width: 284px;
-    border-radius: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08),
-            0 4px 8px rgba(0, 0, 0, 0.06);
+    // height: auto;
+    width: fit-content;
+    min-width: auto;
+    box-shadow: var(--shadow-combined);
+    background-color: var(--bg-3);
+    padding: 8px 10px;
     .sidebar__header {
       border-bottom: 1px solid transparent;
-      padding: 10px 18px 10px 20px;
+      padding: 0;
       img {
-        width: 22px;
-        height: 22px;
+        width: 24px;
+        height: 24px;
       }
     }
   }
@@ -37,7 +37,8 @@
     align-items: center;
     padding: 10px 12px 10px 24px;
     justify-content: space-between;
-    border-bottom: 1px solid #EAEBEC;
+    border-bottom: 1px solid var(--border-4);
+
     .sidebar__title-group {
         display: flex;
         align-items: center;
@@ -46,11 +47,22 @@
     .sidebar__title {
         @include headline1($font-weight-bold);
     }
+    
     .sidebar__close {
-      padding: 12px;
+      padding: 4px;
       background: none;
       border: none;
       cursor: pointer;
+      display: flex;
+      align-items: center;
+    }
+
+    .sidebar-toggle {
+      padding: 8px;
+      border-radius: 8px;
+      &:hover {
+        background: var(--bg-elevated-1);
+      }
     }
   }
 
@@ -61,14 +73,14 @@
     .form-section {
         padding: 24px 0;
         &--with-border {
-            border-bottom: 1px solid #DCDCDC;
+          border-bottom: 1px solid var(--border-3);
         }
     }
   }
 
   &__footer {
     padding: 24px;
-    border-top: 1px solid #e1e1e2;
+    border-top: 1px solid var(--border-4);
     .btn {
         width: 100%;
         margin-top: 24px;

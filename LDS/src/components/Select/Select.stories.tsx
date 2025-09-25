@@ -9,6 +9,14 @@ const meta: Meta<typeof Select> = {
 		disabled: { control: "boolean" },
 		id: { control: false }, // 스토리북에서 단독 사용 시 의미 없음
 	},
+  parameters: {
+    docs: {
+      story: {
+        inline: false, // iframe 안에서 전체 화면으로 보이게
+        height: '400px', // 높이 강제 지정
+      },
+    },
+  },
 };
 export default meta;
 

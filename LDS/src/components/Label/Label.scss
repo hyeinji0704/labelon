@@ -2,7 +2,8 @@
 
 .label {
   @include body2($font-weight-medium);
-  color: var(--color-semantic-label-neutral);
+  
+  color: var(  --text-2 );
   display: inline-block;
   width: 124px;
 

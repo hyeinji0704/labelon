@@ -2,13 +2,12 @@
 
 
 .workboard-content {
-  
-  
   &--1,
   &--2 {
-    background: #fff;          
-    padding: 36px 40px;      
+    background: var(--bg-1);
+    padding: 36px 40px;
     gap: 16px;
+    box-shadow: var(--shadow-lg);
   }
 
   &--1 {
@@ -23,11 +22,17 @@
     gap: 32px 24px; // row-gap, col-gap
   }
 
-  // image 모드일 때도 여기서 커버 가능
-  img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto; // 중앙 정렬
+
+  &--image {
+    display: flex;
+    align-items: center;
+    height: 100%;
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin: 0 auto; // 중앙 정렬
+    }
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
-import { Tag } from "./Tag";
 import type { TagProps } from "./Tag";
+import { Tag } from "./Tag";
 import "./Tag.scss";
 
 export interface TagListProps {

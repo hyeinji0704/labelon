@@ -6,7 +6,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   padding: 12px 16px;
   border-radius: 12px;
   background-color: var(--bg-elevated-2);
@@ -31,7 +30,6 @@
   display: inline-flex;
   align-items: center;
   gap: 4px;
-
   font-size: 15px;     /* body2-normal 대체 */
   line-height: 18px;
   font-weight: 400;
